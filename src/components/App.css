@@ -1,0 +1,121 @@
+@import '~antd/dist/antd.css';
+
+.ant-layout-header .logo {
+    /*width: 120px;*/
+    /*height: 31px;*/
+    /*background: rgba(255,255,255,.2);*/
+    margin: 0 24px 0 24px;
+    float: left;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.summary {
+    justify-content: space-between;
+}
+
+.summary .bulb {
+    text-align: center;
+}
+
+.summary .header {
+    font-size: 20px;
+}
+
+.summary .header p {
+    font-size: 12px;
+    white-space: normal;
+    color: #8c8c8c;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.profile-card .profile-skills {
+    list-style: none;
+    padding-left: 0;
+}
+
+.profile-card .profile-skills li::before {
+    content: "\E632";
+    font-family: 'anticon' !important;
+    padding: 5px;
+}
+
+.profile-card .name {
+    font-size: 20px;
+}
+
+.blog-list .post {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.blog-list .post > div {
+    margin: 5px;
+}
+
+.blog-list .post .post-avatar {
+    flex-grow: 1;
+}
+
+.blog-list .post .post-desc {
+    flex-grow: 4;
+}
+
+.repo-list .repo {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.repo-list .repo > div {
+    margin: 5px;
+}
+
+.repo-list .repo .repo-avatar {
+    flex-grow: 1;
+}
+
+.repo-list .repo .repo-desc {
+    flex-grow: 4;
+}
+
+.dashboard .ant-card {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px
+    }
+}
+
