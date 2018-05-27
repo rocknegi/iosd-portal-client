@@ -91,9 +91,273 @@
     flex-grow: 4;
 }
 
-.dashboard .ant-card {
+.ant-card {
     margin-bottom: 10px;
 }
+
+.expert-level {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 6px solid #f66;
+    top: 30px;
+    left: 87%
+}
+
+.advanced-level,.beginner-level {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    width: 30px;
+    height: 30px
+}
+
+.expert-text {
+    left: 87%;
+    position: absolute;
+    top: 60px
+}
+
+.advanced-level,.advanced-text,.beginner-level,.beginner-text {
+    left: 80%;
+    position: absolute
+}
+
+.advanced-level {
+    border-radius: 50%;
+    border: 6px solid #FECC6E;
+    top: 30px
+}
+
+.advanced-text {
+    top: 60px
+}
+
+.beginner-level {
+    border-radius: 50%;
+    border: 6px solid #82d073;
+    top: 30px
+}
+
+.beginner-text {
+    top: 60px
+}
+
+.card-image {
+    width: 20%;
+}
+
+
+.card-mentors:nth-child(1),.card-mentors:nth-child(2),.card-mentors:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    background-color: #e9e9e9
+}
+
+.card-mentor {
+    padding-bottom: 10px;
+    max-height: 67px;
+    margin-top: 37px;
+    margin-bottom: 25px
+}
+
+.card-mentor-image {
+    display: inline-block;
+    position: relative;
+    min-width: 51.53px;
+    width: 10%;
+}
+
+.card-mentor-image img {
+    border-radius: 50%;
+}
+
+.card-mentor-text {
+    display: inline-block;
+    margin-left: 15px;
+    top: 15px;
+    position: relative;
+
+    font-size: 14px;
+    /*font-weight: 500;*/
+    color: black;
+}
+
+
+.card-mentor-name {
+    max-height: 25px;
+    overflow: hidden;
+    font-size: 17.1px;
+    font-weight: 500;
+}
+
+.card-mentor-divider {
+    border: .5px solid #e9e9e9
+}
+
+.card-price-details {
+    display: inline-block;
+    max-height: 70px
+}
+
+.card-batches {
+    font-size: 17.1px;
+    margin-bottom: 5px
+}
+
+.card-batch-details {
+    display: inline-block;
+    font-size: 19.1px
+}
+
+.card-batch-details span {
+    color: red
+}
+
+.price-button {
+    text-align: center;
+    position: relative;
+    left: 25%;
+    padding-top: 5px;
+}
+
+.learning-button {
+    /*text-align: center;*/
+    /*position: relative;*/
+    /*left: 25%;*/
+    padding: 10px 0;
+}
+
+ .button-solid {
+    background: linear-gradient(to right,#ed7298,#ec8871);
+    color: white;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 30px;
+}
+
+.ant-progress-circle-path {
+    stroke: #ed7298;
+}
+
+
+.classroom-container {
+    margin-bottom: 77px
+}
+
+.classroom-container .classroom-header-box {
+    padding-right: 44px;
+    padding-left: 44px;
+    border-right: 2px solid #ccc
+}
+
+.classroom-container .classroom-header {
+    padding: 0
+}
+
+.classroom-container .classroom-header .classroom-image {
+    display: inline-block
+}
+
+.classroom-container .classroom-text {
+    /*text-transform: uppercase;*/
+    /*font-size: 1.75rem;*/
+    transform: translateY(50%);
+    font-weight: 600
+}
+
+.classroom-container .classroom-image {
+    padding-left: 0
+}
+
+.classroom-container .classroom-para {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+.progress-text {
+    font-size: 1.75rem;
+    text-align: center
+}
+
+.lectures-completed {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0
+}
+
+.reset-progress {
+    color: #fc4f4f;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 0;
+    padding: 0;
+    text-align: left
+}
+
+.course-progress-detail {
+    transform: translateX(-4%)
+}
+
+.row {
+    padding: 10px
+}
+
+.course-progress-heading {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    padding: 0
+}
+
+.progress {
+    padding: 0
+}
+
+.course-progress-box {
+    padding-left: 44px
+}
+
+.course-progress-box .button-solid {
+    width: 100%;
+    height: 68px;
+    max-width: 258px;
+    font-size: 1.5rem;
+    margin-top: 22px
+}
+
+.course-progress-box .progress-circle {
+    padding-right: 7%
+}
+
+.course-progress-box .status-circle {
+    width: 100%;
+    height: 25%;
+    float: left
+}
+
+.course-progress-box .circle-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0
+}
+
+
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
 
 @media (min-width: 576px) {
     .container {

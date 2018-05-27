@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Layout, Menu} from 'antd';
-import {BrowserRouter} from 'react-router-dom' ;
+import {BrowserRouter , Link} from 'react-router-dom' ;
 
 import BreadcrumbComponent from './common/breadcrumb.component' ;
 import RouterComponent from './router.component' ;
@@ -27,7 +27,7 @@ class App extends Component {
                                     defaultSelectedKeys={['1']}
                                     style={{lineHeight: '64px'}}
                                 >
-                                    <Menu.Item key="1">nav 1</Menu.Item>
+                                    <Menu.Item key="1"><Link to='/courses'>Courses</Link></Menu.Item>
                                     <Menu.Item key="2">nav 2</Menu.Item>
                                     <Menu.Item key="3">nav 3</Menu.Item>
                                 </Menu>
@@ -49,7 +49,7 @@ class App extends Component {
                     </Header>
                     <Content style={{padding: '0 50px', marginTop: 64}}>
 
-                        <div className='container' style={{  padding: 24, minHeight: '100vh' }}>
+                        <div className='' style={{  padding: 24, minHeight: '100vh' }}>
                             <BreadcrumbComponent/>
                             <RouterComponent/>
                         </div>

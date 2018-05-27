@@ -11,7 +11,7 @@ import MentorList from "../dashboard/mentor-list.component";
 class DashboardComponent extends Component {
     render(){
         return (
-            <div className='dashboard'>
+            <div className='container dashboard'>
                 <Row gutter={16}>
                     <Col span={8}>
                         <ContributeCard/>
