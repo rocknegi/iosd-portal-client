@@ -1,14 +1,41 @@
 import React, {Component} from 'react' ;
-import {Card, Button, Row, Col, Icon, Progress , Tabs} from 'antd' ;
-const { TabPane } = Tabs;
+import {Card, Button, Row, Col, Icon, Progress, Tabs} from 'antd' ;
+import {NavLink, Switch, Route, Redirect} from 'react-router-dom' ;
+import CourseOverview from "./course-overview.component";
+import CourseContent from "./course-content.component";
+
+const {TabPane} = Tabs;
 
 
 class CoursesDetail extends Component {
 
+
+    renderTabs() {
+
+        return (
+            <div>
+
+                <Switch>
+                    <Route path='/course/:id/overview' component={CourseOverview}/>
+                    <Route path='/course/:id/content' component={CourseContent}/>
+                    <Route path='/course/:id/announcements' component={CourseOverview}/>
+                    <Route path='/course/:id/doubts' component={CourseOverview}/>
+                    <Route exact path="/course/:id" render={({match}) => (
+                        <Redirect to={`/course/${match.params.id}/overview`}/>
+                    )}/>
+                </Switch>
+
+            </div>
+        )
+
+    }
+
+
     render() {
         return (
             <div>
-                <Card>
+                <Card style={{marginTop: 0, marginBottom: 0}}>
+
                     <Row className='classroom-container'>
                         <Col span={12}>
                             <div className="classroom-header-box">
@@ -74,13 +101,31 @@ class CoursesDetail extends Component {
                         </Col>
                     </Row>
                 </Card>
-                <Card>
-                    <Tabs defaultActiveKey="1" size='large'>
-                        <TabPane tab="Tab 1" key="1">Content of tab 1</TabPane>
-                        <TabPane tab="Tab 2" key="2">Content of tab 2</TabPane>
-                        <TabPane tab="Tab 3" key="3">Content of tab 3</TabPane>
-                    </Tabs>
-                </Card>
+                <div className='course-tabs'>
+                    <NavLink to='/course/1/overview'>
+                        <div className='tab'>
+                            Overview
+                        </div>
+                    </NavLink>
+                    <NavLink to='/course/1/content'>
+                        <div className='tab'>
+                            Course Content
+                        </div>
+                    </NavLink>
+                    <NavLink to='/course/1/announcements'>
+                        <div className='tab'>
+                            Announcements
+                        </div>
+                    </NavLink>
+                    <NavLink to='/course/1/doubts'>
+                        <div className='tab'>
+                            Doubts
+                        </div>
+                    </NavLink>
+                </div>
+
+                {this.renderTabs()}
+
             </div>
         )
     }

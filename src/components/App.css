@@ -16,6 +16,97 @@
     float: right;
 }
 
+.custom .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.custom  .trigger:hover {
+    color: #1890ff;
+}
+
+.custom  .logo {
+    height: 32px;
+    background: rgba(255,255,255,.2);
+    margin: 16px;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 80px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+.player-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #000c17;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    top : 0;
+    left: 0;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.course-overview .header {
+    border-bottom: solid 1px #333;
+    color: #333;
+    padding: 0 60px 22px 0;
+    margin: 0 0 49px;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+
+
+.course-tabs {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    background: black;
+    padding: 10px;
+}
+/*background: linear-gradient(to right,#ed7298,#ec8871);*/
+
+.course-tabs a {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white ;
+    padding: 20px;
+}
+
+.heading-d {
+    margin: 0 0 25px
+}
+
+.main-h {
+    font-size: 1.5rem;
+    color: #333
+}
+
+.sub-h {
+    font-size: 1.25rem;
+    color: #f6776f
+}
+
 .summary {
     justify-content: space-between;
 }

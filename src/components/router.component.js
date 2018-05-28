@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom' ;
 import DashboardComponent from './common/dashboard.component' ;
 import Courses from "./courses/courses.component";
 import CoursesDetail from "./courses/course-detail.component";
+import PlayerComponent from "./courses/player.component";
 
 const RouterComponent = () => {
     return (
