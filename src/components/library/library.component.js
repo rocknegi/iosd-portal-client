@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {Row, Col, Modal} from 'antd' ;
+import {Row, Col, Modal, Button} from 'antd' ;
 import books from './books' ;
+import {connect} from 'react-redux';
+import {fetchLibraryBooks} from '../../actions/libraryActions'
 
 class LibraryComponent extends Component {
 
@@ -14,6 +16,14 @@ class LibraryComponent extends Component {
 
         this.handleClick = this.handleClick.bind(this);
         this.handleCancel = this.handleCancel.bind(this)
+    }
+
+    componentWillMount(){
+        this.props.fetchLibraryBooks().then(res => {
+            console.log(res);
+        }).catch(err => {
+            console.error(err);
+        })
     }
 
     handleClick(book) {
@@ -33,17 +43,19 @@ class LibraryComponent extends Component {
     render() {
 
         let selectedBook = this.state.book;
+        console.log(this.props.library);
         return (
             <div>
                 <Row className='container'>
                     {
+                        // this.props.library.books.map(item => {
                         books.map(item => {
                             return (
-                                <Col span={4} className='book-card' onClick={() => {
+                                <Col id={item._id} span={4} className='book-card' onClick={() => {
                                     this.handleClick(item);
                                 }}>
                                     <div className="cover">
-                                        <img className='img-responsive' src={item.cover} alt=""/>
+                                        <img className='img-responsive' src={item.image} alt=""/>
                                     </div>
                                 </Col>
 
@@ -62,36 +74,47 @@ class LibraryComponent extends Component {
                     style={{
                         display: 'table'
                     }}
+                    wrapClassName="vertical-center-modal"
                 >
 
                     <article className="item-pane">
                         <div className="item-preview">
-                            <div className="book" style={{background: `url('${selectedBook.cover}')`}} data-color={selectedBook.color}>
+                            <div className="book" style={
+                                {
+                                    background: `url('${selectedBook.image}')`,
+                                    '--before-bg' : `${selectedBook.color}`
+
+                                }} data-color={selectedBook.color}>
 
                             </div>
                         </div>
                         <div className="item-details">
-                            <h1>{selectedBook.title}</h1><span className="subtitle">{selectedBook.author}</span>
+                            <h1>{selectedBook.name}</h1><span className="subtitle">{selectedBook.author}</span>
                             <div className="pane__section">
                                 <p>
-                                    {selectedBook.abstract}
+                                    {selectedBook.description}
                                 </p>
                             </div>
                             <div className="pane__section clearfix">
 
-                                <a className="button buy-button"
-                                   href={selectedBook.link} target='_blank'>
+                                <Button size='large' className='button-solid'>
                                     Download
-                                </a>
+                                </Button>
                             </div>
                         </div>
                     </article>
-
-
                 </Modal>
             </div>
         );
     }
 }
 
-export default LibraryComponent;
+const mapStateToProps = ({library}) => {
+    return ({
+        library
+    })
+}
+
+export default connect(mapStateToProps , {
+    fetchLibraryBooks
+})(LibraryComponent);

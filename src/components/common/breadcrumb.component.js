@@ -4,7 +4,7 @@ import {Breadcrumb} from 'antd' ;
 
 const BreadcrumbComponent = () => {
     return (
-        <Breadcrumb style={{ margin: '16px 0' }}>
+        <Breadcrumb className='container' style={{ margin: '16px auto' }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>

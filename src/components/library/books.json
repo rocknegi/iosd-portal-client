@@ -1,184 +1,186 @@
 [
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/aclockworkorange_zpsab4c6d1f.jpg",
-    "title": "A Clockwork Orange",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/aclockworkorange_zpsab4c6d1f.jpg",
+    "name": "A Clockwork Orange",
     "author": "Anthony Burgess",
-    "color" : "#000" ,
+    "color" : "#D31902" ,
     "link" : "http://i1274.photobucket.com/albums/y436/jabas1/aclockworkorange_zpsab4c6d1f.jpg",
-    "abstract": "A vicious fifteen-year-old &ldquo;droog&rdquo; is the central character of this 1963 classic, whose stark terror was captured in Stanley Kubrick&rsquo;s magnificent film of the same title. In Anthony Burgess&rsquo;s nightmare vision of the future, where criminals take over after dark, the story is told by the central character, Alex, who talks in a brutal invented slang that brilliantly renders his and his friends&rsquo; social pathology. A Clockwork Orange is a frightening fable about good and evil, and the meaning of human freedom. When the state undertakes to reform Alex&mdash;to &ldquo;redeem&rdquo; him&mdash;the novel asks, &ldquo;At what cost?&rdquo;"
+    "description": "A vicious fifteen-year-old &ldquo;droog&rdquo; is the central character of this 1963 classic, whose stark terror was captured in Stanley Kubrick&rsquo;s magnificent film of the same name. In Anthony Burgess&rsquo;s nightmare vision of the future, where criminals take over after dark, the story is told by the central character, Alex, who talks in a brutal invented slang that brilliantly renders his and his friends&rsquo; social pathology. A Clockwork Orange is a frightening fable about good and evil, and the meaning of human freedom. When the state undertakes to reform Alex&mdash;to &ldquo;redeem&rdquo; him&mdash;the novel asks, &ldquo;At what cost?&rdquo;"
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/ageneraltheoryoflove_zps474669dd.jpg",
-    "title": "A General Theory of Love",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/ageneraltheoryoflove_zps474669dd.jpg",
+    "name": "A General Theory of Love",
     "author": "Thomas Lewis, M.D., Fari Amini, M.D., Richard Lannon, M.D.",
-    "abstract": "A General Theory of Love draws on the latest scientific research to demonstrate that our nervous systems are not self-contained: from earliest childhood, our brains actually link with those of the people close to us, in a silent rhythm that alters the very structure of our brains, establishes life-long emotional patterns, and makes us, in large part, who we are. Explaining how relationships function, how parents shape their child&rsquo;s developing self, how psychotherapy really works, and how our society dangerously flouts essential emotional laws, this is a work of rare passion and eloquence that will forever change the way you think about human intimacy."
+    "color" : "#B99853" ,
+    "description": "A General Theory of Love draws on the latest scientific research to demonstrate that our nervous systems are not self-contained: from earliest childhood, our brains actually link with those of the people close to us, in a silent rhythm that alters the very structure of our brains, establishes life-long emotional patterns, and makes us, in large part, who we are. Explaining how relationships function, how parents shape their child&rsquo;s developing self, how psychotherapy really works, and how our society dangerously flouts essential emotional laws, this is a work of rare passion and eloquence that will forever change the way you think about human intimacy."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/antoinesalphabet_zps82a0ad82.jpg",
-    "title": "Antoine&rsquo;s Alphabet",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/antoinesalphabet_zps82a0ad82.jpg",
+    "name": "Antoine&rsquo;s Alphabet",
     "author": "Jed Perl",
-    "abstract": "Antoine Watteau, one of the most mysterious painters who ever lived, is the inspiration for this delightful investigation of the tangled relationship between art and life. Weaving together historical fact and personal reflections, the influential art critic Jed Perl reconstructs the amazing story of this pioneering bohemian artist who, although he died in 1721, when he was only thirty-six, has influenced innumerable painters and writers in the centuries since&mdash;and whose work continues to deepen our understanding of the place that love, friendship, and pleasure have in our daily lives."
+    "description": "Antoine Watteau, one of the most mysterious painters who ever lived, is the inspiration for this delightful investigation of the tangled relationship between art and life. Weaving together historical fact and personal reflections, the influential art critic Jed Perl reconstructs the amazing story of this pioneering bohemian artist who, although he died in 1721, when he was only thirty-six, has influenced innumerable painters and writers in the centuries since&mdash;and whose work continues to deepen our understanding of the place that love, friendship, and pleasure have in our daily lives."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/ataleofatub_zpsb1973de7.jpg",
-    "title": "A Tale of a Tub",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/ataleofatub_zpsb1973de7.jpg",
+    "name": "A Tale of a Tub",
     "author": "Jonathan Swift",
-    "abstract": "Though the author has written a large Dedication, yet that being addressed to a Prince whom I am never likely to have the honour of being known to; a person, besides, as far as I can observe, not at all regarded or thought on by any of our present writers; and I being wholly free from that slavery which booksellers usually lie under to the caprices of authors, I think it a wise piece of presumption to inscribe these papers to your Lordship, and to implore your Lordship&rsquo;s protection of them."
+    "description": "Though the author has written a large Dedication, yet that being addressed to a Prince whom I am never likely to have the honour of being known to; a person, besides, as far as I can observe, not at all regarded or thought on by any of our present writers; and I being wholly free from that slavery which booksellers usually lie under to the caprices of authors, I think it a wise piece of presumption to inscribe these papers to your Lordship, and to implore your Lordship&rsquo;s protection of them."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/bravenewworld_zps1c1e8179.jpg",
-    "title": "Brave New World",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/bravenewworld_zps1c1e8179.jpg",
+    "name": "Brave New World",
     "author": "Aldous Huxley",
-    "abstract": "When the novel Brave New World first appeared in 1932, its shocking analysis of a scientific dictatorship seemed a projection into the remote future. Here, in one of the most important and fascinating books of his career, Aldous Huxley uses his tremendous knowledge of human relations to compare the modern-day world with his prophetic fantasy. He scrutinizes threats to humanity, such as overpopulation, propaganda, and chemical persuasion, and explains why we have found it virtually impossible to avoid them. Brave New World Revisited is a trenchant plea that humankind should educate itself for freedom before it is too late."
+    "description": "When the novel Brave New World first appeared in 1932, its shocking analysis of a scientific dictatorship seemed a projection into the remote future. Here, in one of the most important and fascinating books of his career, Aldous Huxley uses his tremendous knowledge of human relations to compare the modern-day world with his prophetic fantasy. He scrutinizes threats to humanity, such as overpopulation, propaganda, and chemical persuasion, and explains why we have found it virtually impossible to avoid them. Brave New World Revisited is a trenchant plea that humankind should educate itself for freedom before it is too late."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/centauridevice_zps1b5a0bf6.jpg",
-    "title": "Centauri Device",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/centauridevice_zps1b5a0bf6.jpg",
+    "name": "Centauri Device",
     "author": "M. John Harrison",
-    "abstract": "John Truck was to outward appearances just another lowlife spaceship captain. But he was also the last of the Centaurans&mdash;or at least, half of him was&mdash;which meant that he was the only person who could operate the Centauri Device, a sentient bomb which might hold the key to settling a vicious space war. M. John Harrison&rsquo;s classic novel turns the conventions of space opera on their head, and is written with the precision and brilliance for which is famed."
+    "description": "John Truck was to outward appearances just another lowlife spaceship captain. But he was also the last of the Centaurans&mdash;or at least, half of him was&mdash;which meant that he was the only person who could operate the Centauri Device, a sentient bomb which might hold the key to settling a vicious space war. M. John Harrison&rsquo;s classic novel turns the conventions of space opera on their head, and is written with the precision and brilliance for which is famed."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/charitygirl_zps18c5249f.jpg",
-    "title": "Charity Girl",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/charitygirl_zps18c5249f.jpg",
+    "name": "Charity Girl",
     "author": "Michael Lowenthal",
-    "abstract": "During World War I, seventeen-year-old Frieda Mintz secures a job at a Boston department store and strikes out on her own, escaping her repressive Jewish mother and marriage to a wealthy widower twice her age. Determined to find love on her own terms, she is intoxicated by her newfound freedom and the patriotic fervor of the day. That is, until a soldier reports her as his last sexual contact, sweeping her up in the government&rsquo;s wartime crusade against venereal disease. Quarantined in a detention center, Frieda finds in the Home&rsquo;s confines a group of brash, unforgettable women who help her see the way to a new kind of independence."
+    "description": "During World War I, seventeen-year-old Frieda Mintz secures a job at a Boston department store and strikes out on her own, escaping her repressive Jewish mother and marriage to a wealthy widower twice her age. Determined to find love on her own terms, she is intoxicated by her newfound freedom and the patriotic fervor of the day. That is, until a soldier reports her as his last sexual contact, sweeping her up in the government&rsquo;s wartime crusade against venereal disease. Quarantined in a detention center, Frieda finds in the Home&rsquo;s confines a group of brash, unforgettable women who help her see the way to a new kind of independence."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/dastgah_zpsbf49e229.jpg",
-    "title": "Dastgah",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/dastgah_zpsbf49e229.jpg",
+    "name": "Dastgah",
     "author": "Mark Mordue",
-    "abstract": "Australian award-winning journalist Mark Mordue invites you on his world trip that ranges from a Rolling Stones concert in Istanbul to talking with mullahs and junkies in Tehran, and from a cricket match in Calcutta to an S&M bar in New York, in addition to many points in between. Mordue chronicles his year-long global journey with his girlfriend, Lisa Nicol, exploring countries most Americans never see as well as issues of world citizenship in the 21st century. Written in the tradition of literary journalism, Dastgah will take you to all kinds of places, across the world ... and inside yourself."
+    "description": "Australian award-winning journalist Mark Mordue invites you on his world trip that ranges from a Rolling Stones concert in Istanbul to talking with mullahs and junkies in Tehran, and from a cricket match in Calcutta to an S&M bar in New York, in addition to many points in between. Mordue chronicles his year-long global journey with his girlfriend, Lisa Nicol, exploring countries most Americans never see as well as issues of world citizenship in the 21st century. Written in the tradition of literary journalism, Dastgah will take you to all kinds of places, across the world ... and inside yourself."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/kockroach_zps0ab7b696.jpg",
-    "title": "Kockroach",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/kockroach_zps0ab7b696.jpg",
+    "name": "Kockroach",
     "author": "Tyler Knox",
-    "abstract": "It is the mid-1950s, and Kockroach, perfectly content with his life infesting a fleabag hotel off Times Square, awakens to discover that somehow he&rsquo;s been transformed into, of all things, a human. A tragic turn of events, yes, but cockroaches are awesome coping machines, so Kockroach copes. Step by step, he learns the ways of man: how to walk, how to talk, and how to wear a jaunty brown fedora. Led by his primitive desires and insectile amorality, he navigates through the bizarre human realms of crime, business, politics, and sex. Will he find success or be squashed flat from above? Will he change humanity, or will humanity change him?"
+    "description": "It is the mid-1950s, and Kockroach, perfectly content with his life infesting a fleabag hotel off Times Square, awakens to disimage that somehow he&rsquo;s been transformed into, of all things, a human. A tragic turn of events, yes, but cockroaches are awesome coping machines, so Kockroach copes. Step by step, he learns the ways of man: how to walk, how to talk, and how to wear a jaunty brown fedora. Led by his primitive desires and insectile amorality, he navigates through the bizarre human realms of crime, business, politics, and sex. Will he find success or be squashed flat from above? Will he change humanity, or will humanity change him?"
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/ladychatterleystrial_zps84a0877e.jpg",
-    "title": "Lady Chatterley&rsquo;s Trial",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/ladychatterleystrial_zps84a0877e.jpg",
+    "name": "Lady Chatterley&rsquo;s Trial",
     "author": "C.H. Rolph",
-    "abstract": "In 1960, thirty years after D. H. Lawrence&rsquo;s death, Penguin moved to publish his most provocative novel Lady Chatterley&rsquo;s Lover for the first time. What followed was the most significant literary obscenity trial of the twentieth century, as Penguin called upon a string of expert witnesses including E. M. Forster and Sir Allen Lane to triumphantly defend the book&rsquo;s literary merit, in a case that compellingly reflected the changing face of contemporary society."
+    "description": "In 1960, thirty years after D. H. Lawrence&rsquo;s death, Penguin moved to publish his most provocative novel Lady Chatterley&rsquo;s Lover for the first time. What followed was the most significant literary obscenity trial of the twentieth century, as Penguin called upon a string of expert witnesses including E. M. Forster and Sir Allen Lane to triumphantly defend the book&rsquo;s literary merit, in a case that compellingly reflected the changing face of contemporary society."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/lastnightintwistedriver_zps047d8684.jpg",
-    "title": "Last Night in Twisted River",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/lastnightintwistedriver_zps047d8684.jpg",
+    "name": "Last Night in Twisted River",
     "author": "John Irving",
-    "abstract": "In 1954, in the cookhouse of a logging and sawmill settlement in northern New Hampshire, an anxious twelve-year-old boy mistakes the local constable&rsquo;s girlfriend for a bear. Both the twelve-year-old and his father become fugitives, forced to run from Coos County&mdash;to Boston, to southern Vermont, to Toronto&mdash;pursued by the implacable constable. Their lone protector is a fiercely libertarian logger, once a river driver, who befriends them. In a story spanning five decades, Last Night in Twisted River depicts the recent half-century in the United States as &ldquo;a living replica of Coos County, where lethal hatreds were generally permitted to run their course.&rdquo;"
+    "description": "In 1954, in the cookhouse of a logging and sawmill settlement in northern New Hampshire, an anxious twelve-year-old boy mistakes the local constable&rsquo;s girlfriend for a bear. Both the twelve-year-old and his father become fugitives, forced to run from Coos County&mdash;to Boston, to southern Vermont, to Toronto&mdash;pursued by the implacable constable. Their lone protector is a fiercely libertarian logger, once a river driver, who befriends them. In a story spanning five decades, Last Night in Twisted River depicts the recent half-century in the United States as &ldquo;a living replica of Coos County, where lethal hatreds were generally permitted to run their course.&rdquo;"
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/leviathan_zps222025f9.jpg",
-    "title": "Leviathan",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/leviathan_zps222025f9.jpg",
+    "name": "Leviathan",
     "author": "Philip Hoare",
-    "abstract": "From his childhood fascination with the gigantic models in London&rsquo;s Natural History Museum to adult encounters with the wild animals themselves, Philip Hoare has been obsessed with these whales. Switching between human history and natural history, Leviathan is a gripping voyage of discovery into the heart of this obsession and the book that inspired it: Herman Melville&rsquo;s Moby-Dick. Taking us deep into the whale&rsquo;s domain, Philip Hoare shows us these mysterious animals as they have never been before."
+    "description": "From his childhood fascination with the gigantic models in London&rsquo;s Natural History Museum to adult encounters with the wild animals themselves, Philip Hoare has been obsessed with these whales. Switching between human history and natural history, Leviathan is a gripping voyage of disimagey into the heart of this obsession and the book that inspired it: Herman Melville&rsquo;s Moby-Dick. Taking us deep into the whale&rsquo;s domain, Philip Hoare shows us these mysterious animals as they have never been before."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/mylifeasatraitor_zpse8de4793.jpg",
-    "title": "My Life as a Traitor",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/mylifeasatraitor_zpse8de4793.jpg",
+    "name": "My Life as a Traitor",
     "author": "Zarah Ghahramani",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/security_zpsc5ff195f.jpg",
-    "title": "Security",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/security_zpsc5ff195f.jpg",
+    "name": "Security",
+    "color" : "#254FA3" ,
     "author": "Stephen Amidon",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/silkparachute_zps61c86834.jpg",
-    "title": "Silk Parachute",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/silkparachute_zps61c86834.jpg",
+    "name": "Silk Parachute",
     "author": "John McPhee",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/slowdownarthur_zps4eaf97f9.jpg",
-    "title": "Slow Down Arthur, Stick to Thirty",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/slowdownarthur_zps4eaf97f9.jpg",
+    "name": "Slow Down Arthur, Stick to Thirty",
     "author": "Harland Miller",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thealmondpicker_zps4cc6cd0f.jpg",
-    "title": "The Almond Picker",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thealmondpicker_zps4cc6cd0f.jpg",
+    "name": "The Almond Picker",
     "author": "Simonetta Agnello Hornby",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thearchivist_zpscbaeee22.jpg",
-    "title": "The Archivist",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thearchivist_zpscbaeee22.jpg",
+    "name": "The Archivist",
     "author": "Martha Cooley",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/theassassinssong_zpsaff5afbe.jpg",
-    "title": "The Assassin&rsquo;s Song",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/theassassinssong_zpsaff5afbe.jpg",
+    "name": "The Assassin&rsquo;s Song",
     "author": "M.G. Vassanji",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thebirdcatcher_zps0267b773.jpg",
-    "title": "The Bird Catcher",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thebirdcatcher_zps0267b773.jpg",
+    "name": "The Bird Catcher",
     "author": "Laura Jacobs",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thefortressofsolitude_zpsa4035a73.jpg",
-    "title": "The Fortress of Solitude",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thefortressofsolitude_zpsa4035a73.jpg",
+    "name": "The Fortress of Solitude",
     "author": "Jonathan Lethem",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thefountainhead_zps5ca1c605.jpg",
-    "title": "The Fountainhead",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thefountainhead_zps5ca1c605.jpg",
+    "name": "The Fountainhead",
     "author": "Ayn Rand",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thegirlwiththedragontattoo_zps8730fda0.jpg",
-    "title": "The Girl with the Dragon Tattoo",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thegirlwiththedragontattoo_zps8730fda0.jpg",
+    "name": "The Girl with the Dragon Tattoo",
     "author": "Stieg Larsson",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thekingdomofinfinitespace_zpsb60ebb59.jpg",
-    "title": "The Kingdom of Infinite Space",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thekingdomofinfinitespace_zpsb60ebb59.jpg",
+    "name": "The Kingdom of Infinite Space",
     "author": "Raymond Tallis",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/themasqueofreddeath_zps019a994d.jpg",
-    "title": "The Masque of Red Death",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/themasqueofreddeath_zps019a994d.jpg",
+    "name": "The Masque of Red Death",
     "author": "Edgar Allan Poe",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/themelancholyofanatomy_zpseadc8295.jpg",
-    "title": "The Melancholy of Anatomy",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/themelancholyofanatomy_zpseadc8295.jpg",
+    "name": "The Melancholy of Anatomy",
     "author": "Shelley Jackson",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thenoodlemaker_zps09a99dae.jpg",
-    "title": "The Noodle Maker",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thenoodlemaker_zps09a99dae.jpg",
+    "name": "The Noodle Maker",
     "author": "Ma Jian",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thenwecametotheend_zpsf1c2d00f.jpg",
-    "title": "Then We Came to the End",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thenwecametotheend_zpsf1c2d00f.jpg",
+    "name": "Then We Came to the End",
     "author": "Joshua Ferris",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/thesegraniteislands_zps157f8499.jpg",
-    "title": "These Granite Islands",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/thesegraniteislands_zps157f8499.jpg",
+    "name": "These Granite Islands",
     "author": "Sarah Stonich",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   },
   {
-    "cover": "http://i1274.photobucket.com/albums/y436/jabas1/toairishuman_zpsd5d366a7.jpg",
-    "title": "To Air Is Human",
+    "image": "http://i1274.photobucket.com/albums/y436/jabas1/toairishuman_zpsd5d366a7.jpg",
+    "name": "To Air Is Human",
     "author": "Bj&ouml;rn T&uuml;roque",
-    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices nisl lorem, at lacinia diam lobortis non. Integer et massa sed dui tincidunt sodales. Aenean id dictum augue, in iaculis enim. Etiam ornare ut nunc vitae iaculis. Morbi tristique porta imperdiet. Quisque vel magna id dui euismod ornare. Nunc sed magna massa. Donec consequat est ut nulla molestie mattis. Curabitur at accumsan neque, non sagittis lorem. Suspendisse molestie sapien in est consectetur porta. Phasellus eleifend pulvinar orci, vel suscipit eros sodales sed. Nam at lacinia libero. Phasellus faucibus dolor luctus, consectetur ante ut, tristique eros. Integer eleifend est urna."
   }
 ]
