@@ -1,5 +1,5 @@
 import React, {Component} from 'react' ;
-import {Card, Button, Row, Col} from 'antd' ;
+import {Card, Row, Col} from 'antd' ;
 
 
 class CoursesSummary extends Component {
@@ -44,7 +44,7 @@ class CoursesSummary extends Component {
 
             <Row className='summary'>
                 <Col span={8} className='bulb'>
-                    <img height="68px" src="https://www.codingninjas.in/assets/images/Courses.png" width="68px"/>
+                    <img height="68px" src="https://www.codingninjas.in/assets/images/Courses.png" width="68px" alt={'Random Text'}/>
 
                 </Col>
                 <Col span={16} className='header'>

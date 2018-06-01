@@ -51,7 +51,7 @@ class MentorList extends Component {
 
             <Row className='summary'>
                 <Col span={8} className='bulb'>
-                    <img height="68px" src="https://cdn0.iconfinder.com/data/icons/business-situations-flat-1/64/leadership-boss-mentor-help-team-512.png" width="68px"/>
+                    <img alt={'Random Text'} height="68px" src="https://cdn0.iconfinder.com/data/icons/business-situations-flat-1/64/leadership-boss-mentor-help-team-512.png" width="68px"/>
                 </Col>
                 <Col span={16} className='header'>
                     Mentors

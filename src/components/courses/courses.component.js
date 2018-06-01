@@ -1,5 +1,5 @@
 import React, {Component} from 'react' ;
-import {Card, Button, Row, Col, Avatar} from 'antd' ;
+import {Card, Button, Row, Col} from 'antd' ;
 
 
 class Courses extends Component {
@@ -18,7 +18,9 @@ class Courses extends Component {
                             <div className="card-image o-image-card">
                                 <img
                                     className='img-responsive'
-                                    src="https://minio.cb.lk/amoeba/48704a87-4a16-4930-bc30-b8aae630fb90.SampleCoursepng"/>
+                                    src="https://minio.cb.lk/amoeba/48704a87-4a16-4930-bc30-b8aae630fb90.SampleCoursepng"
+                                    alt={'Random Text'}
+                                />
                             </div>
 
                             <h1 className="card-heading">
@@ -32,7 +34,8 @@ class Courses extends Component {
                             <div className="card-mentor">
                                 <div className="card-mentor-image">
                                     <img src="https://avatars3.githubusercontent.com/u/20574839?s=460&v=4"
-                                         className="card-mentors img-responsive"/>
+                                         className="card-mentors img-responsive"
+                                         alt={'Random Text'}/>
                                 </div>
                                 <div className="card-mentor-text">
                                     <span>Instructors</span>
@@ -68,7 +71,8 @@ class Courses extends Component {
                             <div className="card-image o-image-card">
                                 <img
                                     className='img-responsive'
-                                    src="https://minio.cb.lk/amoeba/48704a87-4a16-4930-bc30-b8aae630fb90.SampleCoursepng"/>
+                                    src="https://minio.cb.lk/amoeba/48704a87-4a16-4930-bc30-b8aae630fb90.SampleCoursepng"
+                                    alt={'Random Text'}/>
                             </div>
 
                             <h1 className="card-heading">
@@ -82,7 +86,8 @@ class Courses extends Component {
                             <div className="card-mentor">
                                 <div className="card-mentor-image">
                                     <img src="https://avatars3.githubusercontent.com/u/20574839?s=460&v=4"
-                                         className="card-mentors img-responsive"/>
+                                         className="card-mentors img-responsive"
+                                         alt={'Random Text'}/>
                                 </div>
                                 <div className="card-mentor-text">
                                     <span>Instructors</span>
@@ -118,7 +123,8 @@ class Courses extends Component {
                             <div className="card-image o-image-card">
                                 <img
                                     className='img-responsive'
-                                    src="https://minio.cb.lk/amoeba/48704a87-4a16-4930-bc30-b8aae630fb90.SampleCoursepng"/>
+                                    src="https://minio.cb.lk/amoeba/48704a87-4a16-4930-bc30-b8aae630fb90.SampleCoursepng"
+                                    alt={'Random Text'}/>
                             </div>
 
                             <h1 className="card-heading">
@@ -132,7 +138,8 @@ class Courses extends Component {
                             <div className="card-mentor">
                                 <div className="card-mentor-image">
                                     <img src="https://avatars3.githubusercontent.com/u/20574839?s=460&v=4"
-                                         className="card-mentors img-responsive"/>
+                                         className="card-mentors img-responsive"
+                                         alt={'Random Text'}/>
                                 </div>
                                 <div className="card-mentor-text">
                                     <span>Instructors</span>

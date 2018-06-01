@@ -1,10 +1,9 @@
 import React, {Component} from 'react' ;
-import {Card, Button, Row, Col, Icon, Progress, Tabs} from 'antd' ;
+import {Card, Button, Row, Col, Icon, Progress} from 'antd' ;
 import {NavLink, Switch, Route, Redirect} from 'react-router-dom' ;
 import CourseOverview from "./course-overview.component";
 import CourseContent from "./course-content.component";
 
-const {TabPane} = Tabs;
 
 
 class CoursesDetail extends Component {
@@ -43,6 +42,7 @@ class CoursesDetail extends Component {
                                     <Row>
                                         <Col className='classroom-image' span={4}>
                                             <img
+                                                alt={'Random Text'}
                                                 className='img-responsive'
                                                 src="https://minio.cb.lk/amoeba/ca0c9d05-931b-4fad-b6c7-9314740c89e9.compprog2png"/>
                                         </Col>

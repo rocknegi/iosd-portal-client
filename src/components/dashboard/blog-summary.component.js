@@ -1,12 +1,18 @@
 import React, {Component} from 'react' ;
 import {Card, Avatar, Row, Col} from 'antd' ;
-
+import {connect} from 'react-redux' ;
+import {fetchBlogPosts} from '../../actions/blogActions' ;
 
 class BlogSummary extends Component {
     state = {
         loading: true,
     }
 
+    componentWillMount() {
+        this.props.fetchBlogPosts().then(data => {
+            this.setState({loading: !this.state.loading});
+        })
+    }
 
     renderPosts() {
         return (
@@ -14,43 +20,23 @@ class BlogSummary extends Component {
                 <p>
                     LATEST POSTS
                 </p>
-                <div className="post">
-                    <div className='post-avatar'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='post-desc'>
-                        <strong>Programming Languages 2018</strong>
-                        <p>kannumittal</p>
-                    </div>
-                </div>
-                <div className="post">
-                    <div className='post-avatar'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='post-desc'>
-                        <strong>Programming Languages 2018</strong>
-                        <p>kannumittal</p>
-                    </div>
-                </div>
-                <div className="post">
-                    <div className='post-avatar'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='post-desc'>
-                        <strong>Programming Languages 2018</strong>
-                        <p>kannumittal</p>
-                    </div>
-                </div>
-                <div className="post">
-                    <div className='post-avatar'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='post-desc'>
-                        <strong>Programming Languages 2018</strong>
-                        <p>kannumittal</p>
-                    </div>
-                </div>
+                {
+                    this.props.posts.slice(-5).reverse().map(item => {
+                        console.log(item)
+                         return (<div className="post">
+                            <div className='post-avatar'>
+                                <Avatar size="large" src={item.thumbnail}/>
+                            </div>
+                            <div className='post-desc'>
+                                <strong>{item.title}</strong>
+                                <p>{item.author}</p>
+                            </div>
+                        </div>)
+                    })
+                }
+
             </div>
+
         )
     }
 
@@ -60,7 +46,7 @@ class BlogSummary extends Component {
 
             <Row className='summary'>
                 <Col span={8} className='bulb'>
-                    <img height="68px" src="https://www.codingninjas.in/assets/images/glasses.png"/>
+                    <img alt={'Random Text'} height="68px" src="https://www.codingninjas.in/assets/images/glasses.png"/>
 
                 </Col>
                 <Col span={16} className='header'>
@@ -84,11 +70,12 @@ class BlogSummary extends Component {
         );
     }
 
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({loading: !this.state.loading});
-        }, 1000)
-    }
 }
 
-export default BlogSummary;
+const mapStateToProps = (state) => ({
+    posts: state.blog.posts
+});
+
+export default connect(mapStateToProps, {
+    fetchBlogPosts
+})(BlogSummary);

@@ -60,7 +60,7 @@ class ContributeCard extends Component {
 
             <Row className='summary'>
                 <Col span={8} className='bulb'>
-                    <img height="68px" src="http://danajfrank.com/assets/img/sidewalks/project_roles_icon.png" width="68px"/>
+                    <img alt={'Random Text'} height="68px" src="http://danajfrank.com/assets/img/sidewalks/project_roles_icon.png" width="68px"/>
                 </Col>
                 <Col span={16} className='header'>
                     Projects
