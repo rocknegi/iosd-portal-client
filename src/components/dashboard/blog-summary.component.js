@@ -1,6 +1,7 @@
-import React, {Component} from 'react' ;
+ import React, {Component} from 'react' ;
 import {Card, Avatar, Row, Col} from 'antd' ;
 import {connect} from 'react-redux' ;
+import {Link} from 'react-router-dom' ;
 import {fetchBlogPosts} from '../../actions/blogActions' ;
 
 class BlogSummary extends Component {
@@ -53,7 +54,7 @@ class BlogSummary extends Component {
                     Blog
                     <p>
                         Want to know some more? Go Through our awesome blogs. <br/>
-                        <a>Know More</a>
+                        <Link to='/blog'>Know More</Link>
                     </p>
                 </Col>
             </Row>

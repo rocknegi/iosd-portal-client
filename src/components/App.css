@@ -1,5 +1,6 @@
 @import '~antd/dist/antd.css';
-
+@import "css/blog.css";
+@import "css/events.css";
 
 .vertical-center-modal {
     vertical-align: middle;

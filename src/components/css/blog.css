@@ -1,0 +1,38 @@
+/*Overrding AntD Card Padding */
+.blog .ant-card-body {
+    padding: 0;
+}
+
+
+
+.blog .blog-image {
+    overflow: hidden;
+    background-size : contain !important;
+    background-position: 50% 50% !important;
+    background-color: #dedede !important;
+    background-repeat: no-repeat;
+}
+
+.blog .blog-content {
+    padding: 10px;
+}
+
+.blog-content .blog-title {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.blog-content .blog-excerpt {
+    font-size: 1.1rem;
+    color: rgba(0,0,0,.54);
+    margin-bottom: 10px;
+}
+
+.blog-content .blog-author {
+    font-size:0.9rem;
+    margin-bottom: 5px;
+}
+
+

@@ -24,7 +24,10 @@ const HomeComponent = (props) => {
                         >
                             <Menu.Item key="1"><Link to='/courses'>Courses</Link></Menu.Item>
                             <Menu.Item key="2"><Link to='/library'>Library</Link></Menu.Item>
-                            <Menu.Item key="3">nav 3</Menu.Item>
+                            <Menu.Item key="3"><Link to='/blog'>Blog</Link></Menu.Item>
+                            <Menu.Item key="4"><Link to='/events'>Events</Link></Menu.Item>
+
+
                         </Menu>
                     </div>
                     <div className="pull-right">
