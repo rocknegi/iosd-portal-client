@@ -13,9 +13,11 @@ const HomeComponent = (props) => {
         <Layout className="layout">
             <Header style={{position: 'fixed', width: '100%', backgroundColor: '#fff'}}>
                 <div className="container">
+                    <Link to='/'>
                     <div className="logo">
                         <img src="http://iosd.tech/img/IOSD-logo.png" alt=""/>
                     </div>
+                    </Link>
                     <div className="pull-left">
                         <Menu
                             mode="horizontal"

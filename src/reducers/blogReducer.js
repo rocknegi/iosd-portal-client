@@ -1,5 +1,4 @@
 import { SET_BLOG_POSTS } from '../actions/types';
-import isEmpty from 'lodash/isEmpty';
 
 const initialState = {
     posts: [],

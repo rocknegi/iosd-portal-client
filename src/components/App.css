@@ -7,6 +7,9 @@
     padding-top: 5%;
 }
 
+.id-card .ant-card-body {
+    padding: 0;
+}
 
 .book-card {
     padding : 10px;
@@ -351,7 +354,7 @@
 }
 
  .button-solid {
-    background: linear-gradient(to right,#ed7298,#ec8871);
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
     color: white;
     height: 50px;
     padding: 0 30px;
@@ -359,7 +362,7 @@
 }
 
 .ant-progress-circle-path {
-    stroke: #ed7298;
+    stroke: #2f80ed;
 }
 
 
@@ -412,7 +415,7 @@
 }
 
 .reset-progress {
-    color: #fc4f4f;
+    color: #2f80ed;
     font-weight: 500;
     font-size: 20px;
     margin-top: 0;

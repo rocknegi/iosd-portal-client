@@ -1,11 +1,51 @@
 import React, {Component} from 'react' ;
-import {Card, Avatar, Row, Col} from 'antd' ;
+import {Card, Avatar, Modal , Button ,Row, Col} from 'antd' ;
+import {connect} from 'react-redux' ;
+import isEmpty from 'lodash/isEmpty' ;
+import {fetchProjects} from "../../actions/projectActions";
 
 class ContributeCard extends Component {
-    state = {
-        loading: true,
-    };
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loading: true,
+            project : {
+                prerequisites : []
+            },
+            visible : false
+        };
+
+        this.handleClick = this.handleClick.bind(this);
+        this.handleCancel = this.handleCancel.bind(this)
+    }
+
+
+    handleClick(project) {
+        console.log(project , "Project");
+        this.setState({
+            visible: true,
+            project
+        })
+    }
+
+    handleCancel() {
+        this.setState({
+            visible: false
+        })
+    }
+
+    componentWillMount() {
+        console.log(this.props.projects);
+        if (isEmpty(this.props.projects)) {
+            console.log("Fetching Projects");
+            this.props.fetchProjects().then(() => {
+                console.log("Fetch Completed for Projects");
+                this.setState({loading: !this.state.loading});
+            })
+        }
+    }
 
     renderRepos() {
         return (
@@ -13,43 +53,26 @@ class ContributeCard extends Component {
                 <p>
                     PROJECT TO WORK ON
                 </p>
-                <div className="repo">
-                    <div className='repo-icon'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='repo-desc'>
-                        <strong>Benefit</strong>
-                        <p>A Health Management App help users</p>
-                    </div>
-                </div>
-                <div className="repo">
-                    <div className='repo-icon'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='repo-desc'>
-                        <strong>Benefit</strong>
-                        <p>A Health Management App help users</p>
-                    </div>
-                </div>
-                <div className="repo">
-                    <div className='repo-icon'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='repo-desc'>
-                        <strong>Benefit</strong>
-                        <p>A Health Management App help users</p>
-                    </div>
-                </div>
-                <div className="repo">
-                    <div className='repo-icon'>
-                        <Avatar size="large" icon="user"/>
-                    </div>
-                    <div className='repo-desc'>
-                        <strong>Benefit</strong>
-                        <p>A Health Management App help users</p>
-                    </div>
-                </div>
+                {
+                    this.props.projects.map(project => {
+                        return (
 
+
+                            <div className="repo" onClick={()=> {
+                                this.handleClick(project)
+                            }}>
+                                <div className='repo-icon'>
+                                    <Avatar size="large" icon="user" src={project.image}/>
+                                </div>
+                                <div className='repo-desc'>
+                                    <strong>{project.name}</strong>
+                                    <p>{project.caption}</p>
+                                </div>
+                            </div>
+                        )
+
+                    })
+                }
             </div>
         )
     }
@@ -60,7 +83,8 @@ class ContributeCard extends Component {
 
             <Row className='summary'>
                 <Col span={8} className='bulb'>
-                    <img alt={'Random Text'} height="68px" src="http://danajfrank.com/assets/img/sidewalks/project_roles_icon.png" width="68px"/>
+                    <img alt={'Random Text'} height="68px"
+                         src="http://danajfrank.com/assets/img/sidewalks/project_roles_icon.png" width="68px"/>
                 </Col>
                 <Col span={16} className='header'>
                     Projects
@@ -73,21 +97,64 @@ class ContributeCard extends Component {
 
 
         )
-
+        
+        let selectedProject = this.state.project;
+        
         return (
             <div>
                 <Card loading={this.state.loading} title={f}>
                     {this.renderRepos()}
                 </Card>
+                <Modal
+                    visible={this.state.visible}
+                    onCancel={this.handleCancel}
+                    footer={null}
+                    width={'1000 shitty pixels'}
+                    style={{
+                        display: 'table'
+                    }}
+                    wrapClassName="vertical-center-modal"
+                >
+                    <article className="item-pane" style={{alignItems : "flex-start"}}>
+                        <div className="item-preview">
+                            <img className='img-responsive' src={selectedProject.image} alt=""/>
+                        </div>
+                        <div className="item-details">
+                            <h1>{selectedProject.name}</h1><span className="subtitle">{selectedProject.caption}</span>
+                            <div className="pane__section">
+                                <p>
+                                    {selectedProject.description}
+                                </p>
+                                <h3>Pre-Requisities</h3>
+                                <ul>
+
+                                    {
+                                        selectedProject.prerequisites.map(item => <li>{item}</li>)
+                                    }
+                                </ul>
+                            </div>
+                            <div className="pane__section clearfix">
+
+                                <Button size='large' className='button-solid'>
+                                    Visit Github
+                                </Button>
+                            </div>
+                        </div>
+                    </article>
+
+                </Modal>
             </div>
         );
     }
 
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({loading: !this.state.loading});
-        }, 1000)
+}
+
+const mapStateToProps = (state) => {
+    return {
+        projects: state.projects
     }
 }
 
-export default ContributeCard;
+export default connect(mapStateToProps, {
+    fetchProjects
+})(ContributeCard);

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import DOMPurify from 'dompurify'
 import {Card, Row, Col} from 'antd' ;
 import {connect} from 'react-redux' ;
+import isEmpty from 'lodash/isEmpty' ;
 import {fetchBlogPosts} from '../../actions/blogActions' ;
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -12,7 +13,7 @@ class BlogComponent extends Component {
 
     componentWillMount() {
         console.log(this.props.posts);
-        if (this.props.posts) {
+        if (isEmpty(this.props.posts)) {
             console.log(this.props.posts);
 
             this.props.fetchBlogPosts().then(() => {

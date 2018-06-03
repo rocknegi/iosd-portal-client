@@ -23,7 +23,7 @@ class BlogSummary extends Component {
                 </p>
                 {
                     this.props.posts.slice(-5).reverse().map(item => {
-                        console.log(item)
+                        // console.log(item)
                          return (<div className="post">
                             <div className='post-avatar'>
                                 <Avatar size="large" src={item.thumbnail}/>
