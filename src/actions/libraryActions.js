@@ -1,5 +1,6 @@
 import axios from 'axios' ;
 import {SET_LIBRARY_BOOKS} from './types'
+import serverConfig from './server.config';
 
 export function setLibraryBooks({books , category}){
     return {
@@ -12,7 +13,7 @@ export function setLibraryBooks({books , category}){
 
 export function fetchLibraryBooks(){
     return dispatch => {
-        return axios.get('http://localhost:5000/api/v1/library/books').then(res => {
+        return axios.get(`${serverConfig.base_url}/api/v1/library/books`).then(res => {
             // console.log(res.data);
             if(res.data.success){
                 dispatch(setLibraryBooks(res.data))

@@ -1,6 +1,6 @@
 import React from 'react' ;
 import {Layout, Menu} from 'antd';
-import {Link} from 'react-router-dom'
+import {Link, Route} from 'react-router-dom'
 
 import BreadcrumbComponent from './common/breadcrumb.component' ;
 import RouterComponent from './router.component' ;

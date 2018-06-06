@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {SET_MENTORS} from './types'
+import serverConfig from './server.config';
 
 export function setMentors(mentors) {
     return {
@@ -11,7 +12,7 @@ export function setMentors(mentors) {
 export function fetchMentors() {
     console.log('Fetching Events');
     return dispatch => {
-        return axios.get('http://localhost:5000/api/v1/mentors/all').then(res => {
+        return axios.get(`${serverConfig.base_url}/api/v1/mentors/all`).then(res => {
             // console.log(res.data);
             if (res.data.success) {
                 dispatch(setMentors(res.data.data))

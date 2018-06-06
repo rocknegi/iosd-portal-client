@@ -69,8 +69,4 @@ NormalLoginForm.contextTypes = {
 
 const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 
-
-
-
-
 export default connect(null , {login})(WrappedNormalLoginForm);
