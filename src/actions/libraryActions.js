@@ -12,7 +12,7 @@ export function setLibraryBooks({books , category}){
 
 export function fetchLibraryBooks(){
     return dispatch => {
-        return axios.get('http://localhost:5000/api/v1/library/books').then(res => {
+        return axios.get('http://18.222.7.88:5000/api/v1/library/books').then(res => {
             // console.log(res.data);
             if(res.data.success){
                 dispatch(setLibraryBooks(res.data))

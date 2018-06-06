@@ -12,7 +12,7 @@ export function setBlogPosts({feed}){
 export function fetchBlogPosts(){
     console.log('Fetching Blog Posts');
     return dispatch => {
-        return axios.get('http://localhost:5000/api/v1/blog/posts').then(res => {
+        return axios.get('http://18.222.7.88:5000/api/v1/blog/posts').then(res => {
             console.log(res.data);
             if(res.data.success){
                 dispatch(setBlogPosts(res.data))

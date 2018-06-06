@@ -14,7 +14,7 @@ export function login(data) {
     console.log(data);
     return (dispatch) => {
         console.log('called')
-        return axios.post('http://localhost:5000/api/v1/auth/login', data).then(res => {
+        return axios.post('http://18.222.7.88:5000/api/v1/auth/login', data).then(res => {
             console.log(res.data);
             if(res.data.success){
                 const token = res.data.token;
