@@ -1,49 +1,84 @@
+import videoData from './videos.data.js';
 import React, {Component} from 'react';
-import { Layout, Menu, Icon, Button } from 'antd' ;
+import { Layout, Menu, Icon, Button, Badge, Breadcrumb } from 'antd' ;
 const { Header, Footer, Sider, Content } = Layout;
+const SubMenu = Menu.SubMenu;
 
+// TODO: CHANGE VIDEO IN IFRAME ON SELECTING DIFFERENT VIDEO
+// TODO: CHANGE THE CHECK ICON IF THE VIDEO IS WATCHED
 
 class PlayerComponent extends Component {
-    state = {
-        collapsed: false,
-        currently_playing: '',
-        videos: [],
-
-    };
+    constructor(){
+        super();
+        this.state={
+            collapsed: false,
+            currently_playing: '',
+            videos: [],
+            selectedVideo:1,
+            playerTitle: ''
+        }
+    }
+    
     toggle = () => {
         this.setState({
             collapsed: !this.state.collapsed,
         });
     }
-
     
     componentWillMount() {
         // FAKE DATA FETCHING FROM THE SERVER-------
-        let videos = [
-            {name: "video1"},
-            {name: "video2"},
-            {name: "video3"},
-            {name: "video4"},
-            {name: "video5"},
-            {name: "video6"},
-        ];
+        let videos = videoData.data;
 
+        // SETTING THE INITIAL STATE
         this.setState({
             videos: videos,
-            currently_playing: 'https://www.youtube.com/embed/t27W1yUrYmM'
+            currently_playing: 'https://www.youtube.com/embed/t27W1yUrYmM',
+            playerTitle: 'SOME TITLE'
         });
     }
+
+    // FIRED WHEN A VIDEO FROM MENU IS SELECTED
+    /**
+     * 
+     * @param {item} MenuItem returns the react class of the selected video
+     */
+    onSelectVideo({item, key, selectedKey}){
+        
+        this.setState({
+            selectedVideo:key,
+            playerTitle: item.props.videoTitle
+        })
+    }  
     
 
     // Load videos --------
     getVideosList(){
-        return this.state.videos.map((video, index) => (
-            <Menu.Item key={index+1}>
-                <Icon type="video-camera" />
-                <span>{video.name}</span>
-            </Menu.Item>
+        
+        return this.state.videos.map((section, index) => (
+            <SubMenu 
+                key={`sub${index+1}`} 
+                title={
+                    <span>
+                        <Icon type="folder" />
+                        <span>{section.section_title}</span>
+                        <span style={{marginLeft:'20px',color: '#66ff66'}}>
+                            {section.videos.filter((video) => video.watched).length}
+                            <span style={{color:"#FFFFFF"}}>/{section.videos.length}</span>
+                        </span>
+                    </span>}
+            >
+                {section.videos.map((video,i) => (
+                    <Menu.Item key={video._id} url={video.url} videoTitle={video.title}>
+                        {this.state.selectedVideo == video._id ? <Icon type="play-circle" />: <Icon type="video-camera"/>}
+                        <span>{video.title}</span>
+                        {video.watched ? <Icon type="check" style={{color:'#66ff66'}} />:''}
+                    </Menu.Item>
+                ))}
+            </SubMenu>
         ));
+
     }
+
 
     render() {
         return (
@@ -55,7 +90,12 @@ class PlayerComponent extends Component {
                 >
                     <div className="logo" />
                     {/* ---------VIDEOS LIST GOES HERE ---------- */}
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+                    <Menu 
+                        theme="dark" 
+                        mode="inline" 
+                        defaultSelectedKeys={['1']}
+                        onSelect={this.onSelectVideo.bind(this)}
+                    >
                         {this.getVideosList()}
                     </Menu>
                     {/* ----------------------------------------- */}
@@ -67,7 +107,9 @@ class PlayerComponent extends Component {
                             type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
                             onClick={this.toggle}
                         />
-                        <h2 style={{display: 'inline'}}> ----  Title of the video ---- </h2>
+                        <span style={{marginRight: "30px"}}>
+                            ----- {this.state.playerTitle} -----
+                        </span>
                         <Button type="primary"> Go to Dashboard </Button> 
 
                     </Header>
