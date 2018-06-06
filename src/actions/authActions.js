@@ -2,6 +2,7 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import {SET_CURRENT_USER} from "./types";
 import setAuthHeader from "../utils/setAuthHeader";
+import serverConfig from './server.config';
 
 export function setCurrentUser(user) {
     return {
@@ -14,7 +15,7 @@ export function login(data) {
     console.log(data);
     return (dispatch) => {
         console.log('called')
-        return axios.post('http://18.222.7.88:5000/api/v1/auth/login', data).then(res => {
+        return axios.post(`${serverConfig.base_url}/api/v1/auth/login`, data).then(res => {
             console.log(res.data);
             if(res.data.success){
                 const token = res.data.token;

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {SET_PROJECTS} from './types'
+import serverConfig from './server.config';
 
 export function setProjects(projects) {
     return {
@@ -11,7 +12,7 @@ export function setProjects(projects) {
 export function fetchProjects() {
     console.log('Fetching Projects');
     return dispatch => {
-        return axios.get('http://18.222.7.88:5000/api/v1/projects/all').then(res => {
+        return axios.get(`${serverConfig.base_url}/api/v1/projects/all`).then(res => {
             // console.log(res.data);
             if (res.data.success) {
                 dispatch(setProjects(res.data.data))

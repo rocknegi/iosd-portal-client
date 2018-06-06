@@ -1,5 +1,6 @@
 import axios from 'axios' ;
 import {SET_EVENTS} from './types'
+import serverConfig from './server.config';
 
 export function setEvents(events){
     return {
@@ -12,7 +13,7 @@ export function setEvents(events){
 export function fetchEvents(){
     console.log('Fetching Events');
     return dispatch => {
-        return axios.get('http://18.222.7.88:5000/api/v1/events').then(res => {
+        return axios.get(`${serverConfig.base_url}/api/v1/events`).then(res => {
             console.log(res.data);
             if(res.data.success){
                 dispatch(setEvents(res.data.data))
