@@ -50,7 +50,7 @@ const HomeComponent = (props) => {
             <Content style={{padding: '0 50px', marginTop: 64}}>
 
                 <div className='' style={{padding: 24, minHeight: '100vh'}}>
-                    <BreadcrumbComponent/>
+                    {/*<BreadcrumbComponent/>*/}
                     <RouterComponent/>
                 </div>
             </Content>

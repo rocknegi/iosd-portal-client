@@ -1,0 +1,14 @@
+.course-card {
+
+  .pre-requisites {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .pre-requisites li::before {
+    content: "\E632";
+    font-family: 'anticon' !important;
+    padding: 5px;
+  }
+
+}

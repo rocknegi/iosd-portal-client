@@ -3,21 +3,22 @@ import {BrowserRouter, Switch, Route, } from 'react-router-dom' ;
 
 import HomeComponent from "./home.component";
 import LoginComponent from './auth/login.component'
-import PlayerComponent from './courses/player.component';
+import PlayerComponent from './courses/common/player.component';
 
 import './App.css';
+
 import requireAuth from "../utils/requireAuth";
-
-
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div>   
+                <div>
+                    <Switch>
                         <Route exact path='/login' component ={LoginComponent}/>
-                        <Route exact path='/' component={requireAuth(HomeComponent)}/>
                         <Route exact path='/player' component={requireAuth(PlayerComponent)}/>
+                        <Route path='/' component={requireAuth(HomeComponent)}/>
+                    </Switch>
                 </div>
             </BrowserRouter>
         );

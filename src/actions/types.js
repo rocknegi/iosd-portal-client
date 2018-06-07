@@ -5,3 +5,4 @@ export const SET_LIBRARY_BOOKS = 'SET_LIBRARY_BOOKS' ;
 export const SET_EVENTS = 'SET_EVENTS' ;
 export const SET_MENTORS = 'SET_MENTORS' ;
 export const SET_PROJECTS = 'SET_PROJECTS' ;
+export const SET_COURSES = 'SET_COURSES' ;

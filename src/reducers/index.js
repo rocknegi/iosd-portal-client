@@ -7,6 +7,7 @@ import eventReducer from './eventReducer' ;
 import mentorReducer from './mentorReducer';
 import projectReducer from './projectReducer';
 import profileReducer from './profileReducer';
+import coursesReducer from './courseReducer' ;
 
 const rootReducer = combineReducers({
     auth : authReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
     events : eventReducer ,
     mentors : mentorReducer,
     projects : projectReducer,
-    profile : profileReducer
+    profile : profileReducer,
+    courses : coursesReducer ,
 });
 
 export default rootReducer ;

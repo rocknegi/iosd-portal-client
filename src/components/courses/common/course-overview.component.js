@@ -1,8 +1,24 @@
 import React, {Component} from 'react';
-import {Row, Col, Card} from 'antd' ;
+import {Row, Col, Card , Spin} from 'antd' ;
+import {connect} from 'react-redux' ;
+import isEmpty from 'lodash/isEmpty' ;
 
 class CourseOverview extends Component {
+
     render() {
+
+
+
+        let courseId = this.props.match.params.id;
+        let course = this.props.courses[courseId] || {};
+        console.log(course);
+        if(isEmpty(course)) {
+            return(
+                <Spin spinning={isEmpty(course)}>
+
+                </Spin>
+            )
+        }
         return (
             <Card style={{marginTop: 0, marginBottom: 0 , padding : '50px 10px 50px 10px'}}>
             <Row className='course-overview'>
@@ -59,22 +75,21 @@ class CourseOverview extends Component {
                                     <img
                                         style={{borderRadius : '50%'}}
                                         className='img-responsive'
-                                        src="https://minio.cb.lk/amoeba/13dd336c-1cd8-4076-9cf5-ba94fbb44b1b" alt=""/>
+                                        src={course.Instructor[0].image} alt=""/>
                                 </div>
                             </Col>
                             <Col span={18}>
                                 <div className="description" style={{paddingTop:10}}>
                                     <div className="heading-d">
                                         <div className="main-h">
-                                            Prateek Narang
+                                            {course.Instructor[0].name}
                                         </div>
                                         <div className="sub-h">
-                                            Mentor, Coding Blocks
+                                            {course.Instructor[0].job}
                                         </div>
                                     </div>
                                     <div className="classroom-para">
-                                        Prateek is an ace-programmer, multi-hackathon winner and CS graduate from DTU,
-                                        and is very passionate about teaching.
+                                        {course.Instructor[0].about}
                                     </div>
                                 </div>
                             </Col>
@@ -88,5 +103,11 @@ class CourseOverview extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        courses: state.courses.map
+    }
+}
 
-export default CourseOverview;
+export default connect(mapStateToProps)(CourseOverview);
+
