@@ -8,6 +8,7 @@ import mentorReducer from './mentorReducer';
 import projectReducer from './projectReducer';
 import profileReducer from './profileReducer';
 import coursesReducer from './courseReducer' ;
+import progressReducer from './progessReducer' ;
 
 const rootReducer = combineReducers({
     auth : authReducer,
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
     projects : projectReducer,
     profile : profileReducer,
     courses : coursesReducer ,
+    progress : progressReducer
 });
 
 export default rootReducer ;

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Card, Button, Row, Col} from 'antd' ;
+import {durationToString} from "../../../utils/conversion_functions";
 
 const CourseCardComponent = ({course}) => {
     let instructor = course.Instructor[0];
@@ -44,7 +45,7 @@ const CourseCardComponent = ({course}) => {
                     <Col span={12}>
                         <div className="card-price-details">
                             <div className="card-batch-details">
-                                {course.total_videos} Videos<br/> <span className="price">Duration : {course.duration}</span>
+                                {course.total_videos} Videos<br/> <span className="price">Duration : {durationToString(course.duration)}</span>
                             </div>
                         </div>
                     </Col>

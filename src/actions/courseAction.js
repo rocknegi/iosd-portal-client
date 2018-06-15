@@ -1,5 +1,5 @@
 import axios from 'axios' ;
-import {SET_COURSES} from './types';
+import {SET_COURSES , SET_PROGRESS} from './types';
 import serverConfig from './server.config';
 
 export function setAllCourses({courses}){
@@ -22,4 +22,29 @@ export function fetchAllCourses(){
             }
         })
     }
+}
+
+export function SetProgress({progress}){
+    return {
+        type : SET_PROGRESS,
+        progress
+    }
+}
+
+
+export function fetchProgress(_id){
+    console.log('Fetching Progress');
+    return dispatch => {
+        return axios.get(`${serverConfig.base_url}/api/v1/progress/course/${_id}`).then(res => {
+            console.log(res.data);
+            if(res.data.success){
+                dispatch(SetProgress(res.data))
+            } else {
+
+            }
+        })
+    }
+
+
+
 }

@@ -1,42 +1,52 @@
 import videoData from '../videos.data.js';
 import React, {Component} from 'react';
-import {Layout, Menu, Divider, Collapse, List, Avatar, Icon, Button, Badge, Breadcrumb} from 'antd' ;
-
+import isEmpty from 'lodash/isEmpty' ;
+import {Layout, Menu, Divider, Collapse, List, Avatar , Spin, Icon, Button, Badge, Breadcrumb} from 'antd' ;
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {fetchAllCourses, fetchProgress} from "../../../actions/courseAction";
 const {Header, Footer, Sider, Content} = Layout;
 const SubMenu = Menu.SubMenu;
 
 
 const {Panel} = Collapse;
+const renderVideo = (vlist , progress  ,courseId) => {
+    return (
+        <List>
+            {
+                vlist.map(video => {
+                    return (
+                        <List.Item key={video._id}>
+                            <List.Item.Meta
+                                avatar={<Avatar
+                                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png"/>}
+                                title={
+                                    <Link to={`/player/course/${courseId}/video/${video._id}`}> {video.title} </Link>
+                                }
+                            />
+                            <span style={{marginRight: 50}}>
+                                {  (progress[video._id] == true) ? <Icon type="check"/> : <div/>  }
+                            </span>
+                        </List.Item>
+                    )
 
-const text = (
-    <List>
-        <List.Item>
-            <List.Item.Meta
-                avatar={<Avatar
-                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png"/>}
-                title={<a href="https://ant.design">Some Video</a>}
-            />
-            <div style={{marginRight: 50}}><Icon type="check"/></div>
-        </List.Item>
-        <List.Item>
-            <List.Item.Meta
-                avatar={<Avatar
-                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png"/>}
-                title={<a href="https://ant.design">Some Video</a>}
-            />
-            <div style={{marginRight: 50}}><Icon type="check"/></div>
-        </List.Item>
-        <List.Item>
-            <List.Item.Meta
-                avatar={<Avatar
-                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png"/>}
-                title={<a href="https://ant.design">Some Video</a>}
-            />
-            <div style={{marginRight: 50}}><Icon type="check"/></div>
-        </List.Item>
-    </List>
+                })
+            }
 
-);
+        </List>
+    )
+}
+
+function getId(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+
+    if (match && match[2].length == 11) {
+        return match[2];
+    } else {
+        return 'error';
+    }
+}
 
 const customPanelStyle = {
     background: '#fff',
@@ -53,9 +63,7 @@ class PlayerComponent extends Component {
         super();
         this.state = {
             collapsed: false,
-            currently_playing: '',
             videos: [],
-            selectedVideo: 1,
             playerTitle: ''
         }
     }
@@ -67,17 +75,37 @@ class PlayerComponent extends Component {
     }
 
     componentWillMount() {
-        // FAKE DATA FETCHING FROM THE SERVER-------
-        let videos = videoData.data;
+        if (isEmpty(this.props.courses)) {
+            this.props.fetchAllCourses().then(() => {
+                console.log("Courses Fetch Completed");
+            })
+        }
+        let courseId = this.props.match.params.cid;
+        if (isEmpty(this.props.progress[courseId])) {
+            this.props.fetchProgress(courseId).then(() => {
+                console.log("Progress Fetch Completed");
+            })
+        }
 
-        // SETTING THE INITIAL STATE
-        this.setState({
-            videos: videos,
-            currently_playing: 'https://www.youtube.com/embed/t27W1yUrYmM',
-            playerTitle: 'SOME TITLE'
-        });
+
+
+        // // FAKE DATA FETCHING FROM THE SERVER-------
+        // let videos = videoData.data;
+        //
+        // // SETTING THE INITIAL STATE
+        // this.setState({
+        //     videos: videos,
+        //     currently_playing: 'https://www.youtube.com/embed/t27W1yUrYmM',
+        //     playerTitle: 'SOME TITLE'
+        // });
     }
+    componentWillReceiveProps(nextProps){
+        console.log("Component Will Props" , nextProps.match.params.vid)
 
+        this.setState({
+            currently_playing: nextProps.match.params.vid,
+        })
+    }
     // FIRED WHEN A VIDEO FROM MENU IS SELECTED
     /**
      *
@@ -93,49 +121,80 @@ class PlayerComponent extends Component {
 
 
     // Load videos --------
-    getVideosList() {
+    getVideosList(section_categories , courseId , progress) {
+        let key = 1;
         return (
             <Collapse bordered={false} style={{background: '#F0F2F5'}}>
                 {
-                    this.state.videos.map((section, index) => (
-                            <Panel key={`sub${index + 1}`} header={
-                                <div>
-                                    <span>{section.section_title}</span>
-                                    <div className="pull-right" style={{marginRight: 20}}>
-                                    <span>
-                                        <span style={{color:'#66ff66'}}>{section.videos.filter((video) => video.watched).length}</span>
-                                        /{section.videos.length}
-                                    </span>
-                                    </div>
-                                </div>
-                            } style={customPanelStyle}>
-                                <p>
-                                    {
-                                        section.videos.map((video, i) => (
-                                                <List.Item key={video._id} url={video.url} videoTitle={video.title}>
-                                                    <List.Item.Meta
-                                                        avatar={<Avatar
-                                                            src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png"/>}
-                                                        title={video.title}
-                                                    />
-                                                    <div style={{marginRight: 10}}>
-                                                        {video.watched ? <Icon type="check" style={{color: '#66ff66'}}/> : ''}
-                                                    </div>
-                                                </List.Item>
-                                            )
-                                        )
 
-                                    }
-                                </p>
+                    Object.keys(section_categories).map((section) => {
+
+                        let vlist = section_categories[section]
+                        let section_length = vlist.length ;
+
+                        let section_done = vlist.filter(video => {
+                            return (progress[video] == true)
+                        }).length ;
+
+                        return (
+                            <Panel header={
+                                <div>
+                                    {section}
+                                    <div className="pull-right" style={{marginRight: 50}}> {section_done}/{section_length}</div>
+                                </div>
+                            } key={key++} style={customPanelStyle}>
+                                {renderVideo( vlist , progress , courseId)}
                             </Panel>
                         )
-                    )
+                    })
+
                 }
+
             </Collapse>
         )
     }
 
     render() {
+
+        console.log("rendering again")
+
+        let courseId = this.props.match.params.cid;
+        let course = this.props.courses[courseId] || {};
+
+        if (isEmpty(course)) {
+            return (
+                <Spin/>
+            )
+        }
+
+        let progress = this.props.progress[courseId];
+        let section_categories = {}
+
+        course.videos.forEach(video => {
+
+            if (video.section in section_categories) {
+                section_categories[video.section].push(video);
+            }
+            else {
+                section_categories[video.section] = [video];
+            }
+        })
+
+        function findSource(vid){
+            let base = '//www.youtube.com/embed/'
+            let a = undefined
+            course.videos.forEach(video => {
+                if(video._id == vid){
+                    a = video ;
+                    return ;
+                }
+            })
+            base += getId(a.url);
+            return base;
+
+        }
+
+
         return (
             <Layout className='custom-player-layout'>
                 <Sider
@@ -151,7 +210,7 @@ class PlayerComponent extends Component {
                     </div>
                     <Divider/>
                     <div>
-                        {this.getVideosList()}
+                        {this.getVideosList(section_categories , courseId , progress)}
                     </div>
                     {/* ---------VIDEOS LIST GOES HERE ---------- */}
                     {/*<Menu*/}
@@ -182,7 +241,7 @@ class PlayerComponent extends Component {
                     </Header>
                     <Content>
                         <div className="video-wrapper">
-                            <iframe className='responsive-embed' src={this.state.currently_playing}
+                            <iframe className='responsive-embed' src={findSource(this.state.currently_playing)}
                                     frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen>
                             </iframe>
                         </div>
@@ -195,4 +254,16 @@ class PlayerComponent extends Component {
     }
 }
 
-export default PlayerComponent;
+const mapStateToProps = (state) => {
+    return {
+        courses: state.courses.map ,
+        progress : state.progress
+    }
+}
+
+
+
+export default connect(mapStateToProps , {
+    fetchAllCourses,
+    fetchProgress
+})(PlayerComponent);

@@ -6,3 +6,4 @@ export const SET_EVENTS = 'SET_EVENTS' ;
 export const SET_MENTORS = 'SET_MENTORS' ;
 export const SET_PROJECTS = 'SET_PROJECTS' ;
 export const SET_COURSES = 'SET_COURSES' ;
+export const SET_PROGRESS = 'SET_PROGRESS';

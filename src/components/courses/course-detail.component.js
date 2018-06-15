@@ -1,10 +1,10 @@
 import React, {Component} from 'react' ;
-import {Card, Button, Row, Col, Icon, Progress} from 'antd' ;
+import {Card, Button, Row, Col, Icon, Progress, Spin} from 'antd' ;
 import {NavLink, Switch, Route, Redirect} from 'react-router-dom' ;
 import CourseOverview from "./common/course-overview.component";
 import CourseContent from "./common/course-content.component";
 import {connect} from 'react-redux';
-import {fetchAllCourses} from "../../actions/courseAction";
+import {fetchAllCourses, fetchProgress} from "../../actions/courseAction";
 import isEmpty from 'lodash/isEmpty' ;
 
 
@@ -16,9 +16,17 @@ class CoursesDetail extends Component {
                 console.log("Courses Fetch Completed");
             })
         }
+        let courseId = this.props.match.params.id;
+        if (isEmpty(this.props.progress[courseId])) {
+            this.props.fetchProgress(courseId).then(() => {
+                console.log("Progress Fetch Completed");
+            })
+        }
+
+
     }
 
-    renderRating(){
+    renderRating() {
         return (
             <div className="rating">
                 <div>
@@ -35,6 +43,7 @@ class CoursesDetail extends Component {
             </div>
         )
     }
+
     renderTabs(course) {
 
         return (
@@ -84,6 +93,13 @@ class CoursesDetail extends Component {
         let courseId = this.props.match.params.id;
         let course = this.props.courses[courseId] || {};
         console.log(course);
+        let progress = 0;
+        console.log("Progress : ", this.props.progress);
+
+        if (this.props.progress[courseId]) {
+            console.log("tirgered if");
+            progress = this.props.progress[courseId]
+        }
 
         return (
             <div>
@@ -112,28 +128,56 @@ class CoursesDetail extends Component {
                             </div>
                         </Col>
                         <Col span={12}>
-                            <div className="course-progress-box">
-                                <div className="course-progress-heading ">
-                                    <h3 className="heading align-self-center">Course Progress</h3>
-                                </div>
+                            {progress ? (
+                                <div className="course-progress-box">
+                                    <div className="course-progress-heading ">
+                                        <h3 className="heading align-self-center">Course Progress</h3>
+                                    </div>
 
-                                <Row className="progress">
-                                    <Col span={6}>
-                                        <Progress type="dashboard" percent={75}/>
-                                    </Col>
-                                    <Col span={18} className='course-progress-detail'>
-                                        <p className="heading-mob">Course Progress</p>
-                                        <p className="lectures-completed">18 of 24 Content completed</p>
-                                        <p className="reset-progress pointer" data-ember-action=""
-                                           data-ember-action-747="747">Reset
-                                            Progress</p>
-                                    </Col>
-                                </Row>
-                                <div className="learning-button">
-                                    <Button size='large' className="button-solid"> Resume Learning</Button>
-                                </div>
+                                    <Row className="progress">
+                                        <Col span={6}>
+                                            <Progress type="dashboard"
+                                                      percent={Object.keys(progress).length / course.total_videos}/>
+                                        </Col>
+                                        <Col span={18} className='course-progress-detail'>
+                                            <p className="heading-mob">Course Progress</p>
+                                            <p className="lectures-completed">{Object.keys(progress).length} of {course.total_videos} Content
+                                                completed</p>
+                                            <p className="reset-progress pointer" data-ember-action=""
+                                               data-ember-action-747="747">Reset
+                                                Progress</p>
+                                        </Col>
+                                    </Row>
+                                    <div className="learning-button">
+                                        <Button size='large' className="button-solid"> Resume Learning</Button>
+                                    </div>
 
-                            </div>
+                                </div>
+                            ) : (
+                                <div className="course-progress-box">
+                                    <div className="course-progress-heading ">
+                                        <h3 className="heading align-self-center">Course Progress</h3>
+                                    </div>
+
+                                    <Row className="progress">
+                                        <Col span={6}>
+                                            <Spin></Spin>
+                                        </Col>
+                                        {/*<Col span={18} className='course-progress-detail'>*/}
+                                        {/*<p className="heading-mob">Course Progress</p>*/}
+                                        {/*<p className="lectures-completed">18 of 24 Content completed</p>*/}
+                                        {/*<p className="reset-progress pointer" data-ember-action=""*/}
+                                        {/*data-ember-action-747="747">Reset*/}
+                                        {/*Progress</p>*/}
+                                        {/*</Col>*/}
+                                    </Row>
+                                    <div className="learning-button">
+                                        <Button size='large' className="button-solid"> Resume Learning</Button>
+                                    </div>
+
+                                </div>
+                            )}
+
                         </Col>
                     </Row>
                 </Card>
@@ -148,11 +192,13 @@ class CoursesDetail extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        courses: state.courses.map
+        courses: state.courses.map,
+        progress: state.progress
     }
 }
 
 
 export default connect(mapStateToProps, {
-    fetchAllCourses
+    fetchAllCourses,
+    fetchProgress
 })(CoursesDetail);

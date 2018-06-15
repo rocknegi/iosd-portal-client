@@ -16,7 +16,7 @@ class App extends Component {
                 <div>
                     <Switch>
                         <Route exact path='/login' component ={LoginComponent}/>
-                        <Route exact path='/player' component={requireAuth(PlayerComponent)}/>
+                        <Route exact path='/player/course/:cid/video/:vid' component={requireAuth(PlayerComponent)}/>
                         <Route path='/' component={requireAuth(HomeComponent)}/>
                     </Switch>
                 </div>
