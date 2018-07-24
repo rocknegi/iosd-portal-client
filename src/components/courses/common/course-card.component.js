@@ -4,7 +4,7 @@ import {Card, Button, Row, Col} from 'antd' ;
 import {durationToString} from "../../../utils/conversion_functions";
 
 const CourseCardComponent = ({course}) => {
-    let instructor = course.Instructor[0];
+    let instructor = course.Instructor;
     return (
             <Card>
                 <div className="beginner-level"></div>
