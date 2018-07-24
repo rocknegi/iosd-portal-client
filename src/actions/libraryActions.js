@@ -14,7 +14,7 @@ export function setLibraryBooks({books , category}){
 export function fetchLibraryBooks(){
     return dispatch => {
         return axios.get(`${serverConfig.base_url}/api/v1/library/books`).then(res => {
-            // console.log(res.data);
+            console.log(res.data);
             if(res.data.success){
                 dispatch(setLibraryBooks(res.data))
             } else {

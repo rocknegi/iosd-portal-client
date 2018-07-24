@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Row, Col, Modal, Button} from 'antd' ;
 import books from './books' ;
+import {Link} from 'react-router-dom' ;
 import {connect} from 'react-redux';
-import {fetchLibraryBooks} from '../../actions/libraryActions'
+import {fetchLibraryBooks} from '../../actions/libraryActions';
 
 class LibraryComponent extends Component {
 
@@ -12,18 +13,18 @@ class LibraryComponent extends Component {
         this.state = {
             visible: false,
             book: {}
-        }
+        };
 
         this.handleClick = this.handleClick.bind(this);
-        this.handleCancel = this.handleCancel.bind(this)
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
-    componentWillMount(){
+    componentWillMount() {
         this.props.fetchLibraryBooks().then(res => {
-            console.log(res);
+            console.log("Books Fetched");
         }).catch(err => {
             console.error(err);
-        })
+        });
     }
 
     handleClick(book) {
@@ -31,13 +32,13 @@ class LibraryComponent extends Component {
         this.setState({
             visible: true,
             book: book
-        })
+        });
     }
 
     handleCancel() {
         this.setState({
             visible: false
-        })
+        });
     }
 
     render() {
@@ -49,7 +50,7 @@ class LibraryComponent extends Component {
                 <Row className='container'>
                     {
                         // this.props.library.books.map(item => {
-                        books.map(item => {
+                        this.props.library.books.map(item => {
                             return (
                                 <Col id={item._id} span={4} className='book-card' onClick={() => {
                                     this.handleClick(item);
@@ -59,7 +60,7 @@ class LibraryComponent extends Component {
                                     </div>
                                 </Col>
 
-                            )
+                            );
 
 
                         })
@@ -82,7 +83,7 @@ class LibraryComponent extends Component {
                             <div className="book" style={
                                 {
                                     background: `url('${selectedBook.image}')`,
-                                    '--before-bg' : `${selectedBook.color}`
+                                    '--before-bg': `${selectedBook.color}`
 
                                 }} data-color={selectedBook.color}>
 
@@ -96,10 +97,11 @@ class LibraryComponent extends Component {
                                 </p>
                             </div>
                             <div className="pane__section clearfix">
-
+                                <Link target='-_blank' to={selectedBook.link}>
                                 <Button size='large' className='button-solid'>
                                     Download
                                 </Button>
+                                </Link>
                             </div>
                         </div>
                     </article>
@@ -112,9 +114,9 @@ class LibraryComponent extends Component {
 const mapStateToProps = ({library}) => {
     return ({
         library
-    })
-}
+    });
+};
 
-export default connect(mapStateToProps , {
+export default connect(mapStateToProps, {
     fetchLibraryBooks
 })(LibraryComponent);

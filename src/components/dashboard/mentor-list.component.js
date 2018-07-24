@@ -12,20 +12,20 @@ class MentorItem extends Component {
         this.setState({
             visible: false,
         });
-    }
+    };
     handleVisibleChange = (visible) => {
         this.setState({visible});
-    }
+    };
 
     render() {
         let mentor = this.props.mentor;
         return (
             <Popover
                 content={
-                    <div style={{padding : 10}}>
-                        <Icon  style={{ fontSize: 18, color: '#08c' }} type="facebook"/> {mentor.facebook} <br/>
-                        <Icon  style={{ fontSize: 18, color: '#08c' }} type="linkedin"/> {mentor.linkedIn} <br/>
-                        <Icon  style={{ fontSize: 18, color: '#08c' }} type="contacts"/> {mentor.mobile} <br/>
+                    <div style={{padding: 10}}>
+                        <Icon style={{fontSize: 18, color: '#08c'}} type="facebook"/> {mentor.facebook} <br/>
+                        <Icon style={{fontSize: 18, color: '#08c'}} type="linkedin"/> {mentor.linkedIn} <br/>
+                        <Icon style={{fontSize: 18, color: '#08c'}} type="contacts"/> {mentor.mobile} <br/>
                         <br/>
                         <a onClick={this.hide}>Close</a>
                     </div>
@@ -46,7 +46,7 @@ class MentorItem extends Component {
                     </div>
                 </div>
             </Popover>
-        )
+        );
     }
 
 }
@@ -58,11 +58,13 @@ class MentorList extends Component {
 
     componentWillMount() {
         if (isEmpty(this.props.mentors)) {
-            console.log("Fetching Mentors")
+            console.log("Fetching Mentors");
             this.props.fetchMentors().then(() => {
                 console.log("Fetch Completed for Mentors");
-                this.setState({loading: !this.state.loading});
-            })
+                this.setState({loading: false});
+            });
+        } else {
+            this.setState({loading: false});
         }
     }
 
@@ -76,11 +78,11 @@ class MentorList extends Component {
                     this.props.mentors.map(mentor => {
                         return (
                             <MentorItem key={mentor._id} mentor={mentor}/>
-                        )
+                        );
                     })
                 }
             </div>
-        )
+        );
     }
 
     render() {
@@ -103,7 +105,7 @@ class MentorList extends Component {
             </Row>
 
 
-        )
+        );
 
         return (
             <div>

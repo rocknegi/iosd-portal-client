@@ -1,16 +1,17 @@
 import videoData from '../videos.data.js';
 import React, {Component} from 'react';
 import isEmpty from 'lodash/isEmpty' ;
-import {Layout, Menu, Divider, Collapse, List, Avatar , Spin, Icon, Button, Badge, Breadcrumb} from 'antd' ;
-import {Link} from 'react-router-dom'
-import {connect} from 'react-redux'
+import {Layout, Menu, Divider, Collapse, List, Avatar, Spin, Icon, Button, Badge, Breadcrumb} from 'antd' ;
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 import {fetchAllCourses, fetchProgress} from "../../../actions/courseAction";
+
 const {Header, Footer, Sider, Content} = Layout;
 const SubMenu = Menu.SubMenu;
 
 
 const {Panel} = Collapse;
-const renderVideo = (vlist , progress  ,courseId) => {
+const renderVideo = (vlist, progress, courseId) => {
     return (
         <List>
             {
@@ -25,17 +26,17 @@ const renderVideo = (vlist , progress  ,courseId) => {
                                 }
                             />
                             <span style={{marginRight: 50}}>
-                                {  (progress[video._id] == true) ? <Icon type="check"/> : <div/>  }
+                                {(progress[video._id] == true) ? <Icon type="check"/> : <div/>}
                             </span>
                         </List.Item>
-                    )
+                    );
 
                 })
             }
 
         </List>
-    )
-}
+    );
+};
 
 function getId(url) {
     var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
@@ -64,48 +65,40 @@ class PlayerComponent extends Component {
         this.state = {
             collapsed: false,
             videos: [],
-            playerTitle: ''
-        }
+            playerTitle: '',
+            currently_playing: ''
+        };
     }
 
     toggle = () => {
         this.setState({
             collapsed: !this.state.collapsed,
         });
-    }
+    };
 
     componentWillMount() {
         if (isEmpty(this.props.courses)) {
             this.props.fetchAllCourses().then(() => {
                 console.log("Courses Fetch Completed");
-            })
+            });
         }
         let courseId = this.props.match.params.cid;
         if (isEmpty(this.props.progress[courseId])) {
             this.props.fetchProgress(courseId).then(() => {
                 console.log("Progress Fetch Completed");
-            })
+            });
         }
 
-
-
-        // // FAKE DATA FETCHING FROM THE SERVER-------
-        // let videos = videoData.data;
-        //
-        // // SETTING THE INITIAL STATE
-        // this.setState({
-        //     videos: videos,
-        //     currently_playing: 'https://www.youtube.com/embed/t27W1yUrYmM',
-        //     playerTitle: 'SOME TITLE'
-        // });
     }
-    componentWillReceiveProps(nextProps){
-        console.log("Component Will Props" , nextProps.match.params.vid)
+
+    componentWillReceiveProps(nextProps) {
+        console.log("Component Will Props", nextProps.match.params.vid);
 
         this.setState({
             currently_playing: nextProps.match.params.vid,
-        })
+        });
     }
+
     // FIRED WHEN A VIDEO FROM MENU IS SELECTED
     /**
      *
@@ -116,12 +109,12 @@ class PlayerComponent extends Component {
         this.setState({
             selectedVideo: key,
             playerTitle: item.props.videoTitle
-        })
+        });
     }
 
 
     // Load videos --------
-    getVideosList(section_categories , courseId , progress) {
+    getVideosList(section_categories, courseId, progress) {
         let key = 1;
         return (
             <Collapse bordered={false} style={{background: '#F0F2F5'}}>
@@ -129,34 +122,35 @@ class PlayerComponent extends Component {
 
                     Object.keys(section_categories).map((section) => {
 
-                        let vlist = section_categories[section]
-                        let section_length = vlist.length ;
+                        let vlist = section_categories[section];
+                        let section_length = vlist.length;
 
                         let section_done = vlist.filter(video => {
-                            return (progress[video] == true)
-                        }).length ;
+                            return (progress[video] == true);
+                        }).length;
 
                         return (
                             <Panel header={
                                 <div>
                                     {section}
-                                    <div className="pull-right" style={{marginRight: 50}}> {section_done}/{section_length}</div>
+                                    <div className="pull-right"
+                                         style={{marginRight: 50}}> {section_done}/{section_length}</div>
                                 </div>
                             } key={key++} style={customPanelStyle}>
-                                {renderVideo( vlist , progress , courseId)}
+                                {renderVideo(vlist, progress, courseId)}
                             </Panel>
-                        )
+                        );
                     })
 
                 }
 
             </Collapse>
-        )
+        );
     }
 
     render() {
 
-        console.log("rendering again")
+        console.log("rendering again");
 
         let courseId = this.props.match.params.cid;
         let course = this.props.courses[courseId] || {};
@@ -164,11 +158,11 @@ class PlayerComponent extends Component {
         if (isEmpty(course)) {
             return (
                 <Spin/>
-            )
+            );
         }
 
         let progress = this.props.progress[courseId];
-        let section_categories = {}
+        let section_categories = {};
 
         course.videos.forEach(video => {
 
@@ -178,17 +172,21 @@ class PlayerComponent extends Component {
             else {
                 section_categories[video.section] = [video];
             }
-        })
+        });
 
-        function findSource(vid){
-            let base = '//www.youtube.com/embed/'
-            let a = undefined
+        function findSource(vid) {
+            console.log("Find Source : ", vid);
+            if (vid === '') {
+                return;
+            }
+            let base = '//www.youtube.com/embed/';
+            let a = undefined;
             course.videos.forEach(video => {
-                if(video._id == vid){
-                    a = video ;
-                    return ;
+                if (video._id === vid) {
+                    a = video;
+                    return;
                 }
-            })
+            });
             base += getId(a.url);
             return base;
 
@@ -210,18 +208,8 @@ class PlayerComponent extends Component {
                     </div>
                     <Divider/>
                     <div>
-                        {this.getVideosList(section_categories , courseId , progress)}
+                        {this.getVideosList(section_categories, courseId, progress)}
                     </div>
-                    {/* ---------VIDEOS LIST GOES HERE ---------- */}
-                    {/*<Menu*/}
-                    {/*theme="light"*/}
-                    {/*mode="inline"*/}
-                    {/*defaultSelectedKeys={['1']}*/}
-                    {/*onSelect={this.onSelectVideo.bind(this)}*/}
-                    {/*>*/}
-                    {/*{this.getVideosList()}*/}
-                    {/*</Menu>*/}
-                    {/* ----------------------------------------- */}
                 </Sider>
                 <Layout style={{marginLeft: (this.state.collapsed ? 0 : '20rem')}}>
                     <Header>
@@ -235,7 +223,7 @@ class PlayerComponent extends Component {
                 {this.state.playerTitle}
                 </span>
                         <div className='go-dashboard'>
-                            <Button className='button-solid' type="primary"> Go to Dashboard </Button>
+                            <Button className='button-solid' type="primary"><Link to={`/course/${courseId}`}>Go to Dashboard</Link> </Button>
                         </div>
 
                     </Header>
@@ -249,21 +237,20 @@ class PlayerComponent extends Component {
                     </Content>
                 </Layout>
             </Layout>
-        )
+        );
 
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        courses: state.courses.map ,
-        progress : state.progress
-    }
-}
+        courses: state.courses.map,
+        progress: state.progress
+    };
+};
 
 
-
-export default connect(mapStateToProps , {
+export default connect(mapStateToProps, {
     fetchAllCourses,
     fetchProgress
 })(PlayerComponent);

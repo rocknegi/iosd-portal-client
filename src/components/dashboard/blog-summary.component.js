@@ -1,4 +1,4 @@
- import React, {Component} from 'react' ;
+import React, {Component} from 'react' ;
 import {Card, Avatar, Row, Col} from 'antd' ;
 import {connect} from 'react-redux' ;
 import {Link} from 'react-router-dom' ;
@@ -7,12 +7,12 @@ import {fetchBlogPosts} from '../../actions/blogActions' ;
 class BlogSummary extends Component {
     state = {
         loading: true,
-    }
+    };
 
     componentWillMount() {
         this.props.fetchBlogPosts().then(data => {
-            this.setState({loading: !this.state.loading});
-        })
+            this.setState({loading: false});
+        });
     }
 
     renderPosts() {
@@ -24,7 +24,7 @@ class BlogSummary extends Component {
                 {
                     this.props.posts.slice(-5).reverse().map(item => {
                         // console.log(item)
-                         return (<div className="post">
+                        return (<div className="post">
                             <div className='post-avatar'>
                                 <Avatar size="large" src={item.thumbnail}/>
                             </div>
@@ -32,13 +32,13 @@ class BlogSummary extends Component {
                                 <strong>{item.title}</strong>
                                 <p>{item.author}</p>
                             </div>
-                        </div>)
+                        </div>);
                     })
                 }
 
             </div>
 
-        )
+        );
     }
 
     render() {
@@ -60,7 +60,7 @@ class BlogSummary extends Component {
             </Row>
 
 
-        )
+        );
 
         return (
             <div>

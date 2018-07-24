@@ -5,7 +5,7 @@ import {Card, Row, Col} from 'antd' ;
 class CoursesSummary extends Component {
     state = {
         loading: true,
-    }
+    };
 
 
     renderCourses() {
@@ -35,7 +35,7 @@ class CoursesSummary extends Component {
                     <p>Competitive Programming Course</p>
                 </div>
             </div>
-        )
+        );
     }
 
     render() {
@@ -44,7 +44,8 @@ class CoursesSummary extends Component {
 
             <Row className='summary'>
                 <Col span={8} className='bulb'>
-                    <img height="68px" src="https://www.codingninjas.in/assets/images/Courses.png" width="68px" alt={'Random Text'}/>
+                    <img height="68px" src="https://www.codingninjas.in/assets/images/Courses.png" width="68px"
+                         alt={'Random Text'}/>
 
                 </Col>
                 <Col span={16} className='header'>
@@ -57,7 +58,7 @@ class CoursesSummary extends Component {
             </Row>
 
 
-        )
+        );
 
         return (
             <div>
@@ -71,7 +72,7 @@ class CoursesSummary extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.setState({loading: !this.state.loading});
-        }, 1000)
+        }, 1000);
     }
 }
 

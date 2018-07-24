@@ -1,5 +1,5 @@
 import React, {Component} from 'react' ;
-import {Card, Avatar, Modal , Button ,Row, Col} from 'antd' ;
+import {Card, Avatar, Modal, Button, Row, Col} from 'antd' ;
 import {connect} from 'react-redux' ;
 import isEmpty from 'lodash/isEmpty' ;
 import {fetchProjects} from "../../actions/projectActions";
@@ -11,29 +11,29 @@ class ContributeCard extends Component {
 
         this.state = {
             loading: true,
-            project : {
-                prerequisites : []
+            project: {
+                prerequisites: []
             },
-            visible : false
+            visible: false
         };
 
         this.handleClick = this.handleClick.bind(this);
-        this.handleCancel = this.handleCancel.bind(this)
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
 
     handleClick(project) {
-        console.log(project , "Project");
+        console.log(project, "Project");
         this.setState({
             visible: true,
             project
-        })
+        });
     }
 
     handleCancel() {
         this.setState({
             visible: false
-        })
+        });
     }
 
     componentWillMount() {
@@ -42,8 +42,10 @@ class ContributeCard extends Component {
             console.log("Fetching Projects");
             this.props.fetchProjects().then(() => {
                 console.log("Fetch Completed for Projects");
-                this.setState({loading: !this.state.loading});
-            })
+                this.setState({loading: false});
+            });
+        } else {
+            this.setState({loading: false});
         }
     }
 
@@ -58,8 +60,8 @@ class ContributeCard extends Component {
                         return (
 
 
-                            <div className="repo" onClick={()=> {
-                                this.handleClick(project)
+                            <div className="repo" onClick={() => {
+                                this.handleClick(project);
                             }}>
                                 <div className='repo-icon'>
                                     <Avatar size="large" icon="user" src={project.image}/>
@@ -69,12 +71,12 @@ class ContributeCard extends Component {
                                     <p>{project.caption}</p>
                                 </div>
                             </div>
-                        )
+                        );
 
                     })
                 }
             </div>
-        )
+        );
     }
 
     render() {
@@ -96,10 +98,10 @@ class ContributeCard extends Component {
             </Row>
 
 
-        )
-        
+        );
+
         let selectedProject = this.state.project;
-        
+
         return (
             <div>
                 <Card loading={this.state.loading} title={f}>
@@ -115,7 +117,7 @@ class ContributeCard extends Component {
                     }}
                     wrapClassName="vertical-center-modal"
                 >
-                    <article className="item-pane" style={{alignItems : "flex-start"}}>
+                    <article className="item-pane" style={{alignItems: "flex-start"}}>
                         <div className="item-preview">
                             <img className='img-responsive' src={selectedProject.image} alt=""/>
                         </div>
@@ -152,8 +154,8 @@ class ContributeCard extends Component {
 const mapStateToProps = (state) => {
     return {
         projects: state.projects
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, {
     fetchProjects

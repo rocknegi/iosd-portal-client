@@ -1,6 +1,6 @@
 import React from 'react' ;
 import {Layout, Menu} from 'antd';
-import {Link, Route} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
 import BreadcrumbComponent from './common/breadcrumb.component' ;
 import RouterComponent from './router.component' ;
@@ -21,13 +21,12 @@ const HomeComponent = (props) => {
                     <div className="pull-left">
                         <Menu
                             mode="horizontal"
-                            defaultSelectedKeys={['1']}
                             style={{lineHeight: '64px'}}
                         >
-                            <Menu.Item key="1"><Link to='/courses'>Courses</Link></Menu.Item>
-                            <Menu.Item key="2"><Link to='/library'>Library</Link></Menu.Item>
-                            <Menu.Item key="3"><Link to='/blog'>Blog</Link></Menu.Item>
-                            <Menu.Item key="4"><Link to='/events'>Events</Link></Menu.Item>
+                            <Menu.Item key="1"><NavLink to='/courses'>Courses</NavLink></Menu.Item>
+                            <Menu.Item key="2"><NavLink to='/library'>Library</NavLink></Menu.Item>
+                            <Menu.Item key="3"><NavLink to='/blog'>Blog</NavLink></Menu.Item>
+                            <Menu.Item key="4"><NavLink to='/events'>Events</NavLink></Menu.Item>
 
 
                         </Menu>

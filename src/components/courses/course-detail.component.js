@@ -6,6 +6,7 @@ import CourseContent from "./common/course-content.component";
 import {connect} from 'react-redux';
 import {fetchAllCourses, fetchProgress} from "../../actions/courseAction";
 import isEmpty from 'lodash/isEmpty' ;
+import ComingSoon from "./common/coming-soon.component";
 
 
 class CoursesDetail extends Component {
@@ -75,8 +76,8 @@ class CoursesDetail extends Component {
                     <Switch>
                         <Route path='/course/:id/overview' component={CourseOverview}/>
                         <Route path='/course/:id/content' component={CourseContent}/>
-                        <Route path='/course/:id/announcements' component={CourseOverview}/>
-                        <Route path='/course/:id/doubts' component={CourseOverview}/>
+                        <Route path='/course/:id/announcements' component={ComingSoon}/>
+                        <Route path='/course/:id/doubts' component={ComingSoon}/>
                         <Route exact path="/course/:id" render={({match}) => (
                             <Redirect to={`/course/${match.params.id}/overview`}/>
                         )}/>
