@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Row,Col  , Divider, Card} from 'antd'
-import ProfileCard from "../dashboard/profile-card.component";
+import ProfileCard from "../dashboard/ProfileCard";
 
 class ProfileComponent extends Component {
     render() {

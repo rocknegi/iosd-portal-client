@@ -14,7 +14,7 @@ export function fetchUserProfile() {
     console.log('Fetching User Profile');
     return dispatch => {
         return axios.get(`${serverConfig.base_url}/api/v1/profile/`).then(res => {
-            console.log(res.data);
+            // console.log(res.data);
             if (res.data.success) {
                 dispatch(setUserProfile(res.data.user))
             } else {
