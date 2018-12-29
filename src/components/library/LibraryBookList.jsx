@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import {Row, Col, Modal, Button} from 'antd' ;
-import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
-import {fetchLibraryBooks, startDeleteLibraryBook} from '../../actions/libraryActions';
+import React, { Component } from 'react';
+import { Row, Col, Modal, Button } from 'antd';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { fetchLibraryBooks, startDeleteLibraryBook } from '../../actions/libraryActions';
 
 class LibraryComponent extends Component {
 
@@ -20,7 +20,7 @@ class LibraryComponent extends Component {
     }
 
     componentWillMount() {
-        if(this.props.library.books.length === 0) {
+        if (this.props.library.books.length === 0) {
             this.props.fetchLibraryBooks().then(res => {
                 console.log("Books Fetched");
             }).catch(err => {
@@ -52,10 +52,12 @@ class LibraryComponent extends Component {
         });
     }
 
+
     render() {
         let selectedBook = this.state.book;
-        const {books} = this.props.library;
+        const { books } = this.props.library;
         console.log("Lubrary", this.props.library);
+        console.log("rohit", this.props);
         return (
             <div>
                 <Row className='container'>
@@ -66,7 +68,7 @@ class LibraryComponent extends Component {
                                     this.handleClick(item);
                                 }}>
                                     <div className="cover">
-                                        <img className='img-responsive' src={item.image} alt=""/>
+                                        <img className='img-responsive' src={item.image} alt="" />
                                     </div>
                                 </Col>
                             );
@@ -104,7 +106,7 @@ class LibraryComponent extends Component {
                             </div>
                             <div className="pane__section clearfix">
                                 <Button size='large' className='button-solid mr-4'>
-                                    <a href={selectedBook.link}>Download</a>
+                                    <a download href={selectedBook.link}>Download</a>
                                 </Button>
                                 {
                                     this.props.isAdmin &&
@@ -115,9 +117,14 @@ class LibraryComponent extends Component {
                                             </Button>
                                         </Link>
                                         <Button size='large' className='button-solid'
-                                                onClick={(id) => this.handleDelete(selectedBook._id)}>
+                                            onClick={(id) => this.handleDelete(selectedBook._id)}>
                                             Delete
                                         </Button>
+                                        <Link to={`/admin/library/view/${selectedBook._id}`}>
+                                            <Button size='large' className='button-solid mr-2'>
+                                                View
+                                            </Button>
+                                        </Link>
                                     </div>
 
                                 }
@@ -131,7 +138,7 @@ class LibraryComponent extends Component {
     }
 }
 
-const mapStateToProps = ({library, auth}) => {
+const mapStateToProps = ({ library, auth }) => {
     return ({
         library,
         isAdmin: auth.isAdmin

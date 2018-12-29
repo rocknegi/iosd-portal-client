@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import {Collapse, List, Avatar, Spin, Icon} from 'antd' ;
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux' ;
-import isEmpty from 'lodash/isEmpty' ;
+import { Collapse, List, Avatar, Spin, Icon } from 'antd';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import isEmpty from 'lodash/isEmpty';
 
-const {Panel} = Collapse;
+const { Panel } = Collapse;
 
 
 const renderVideo = (vlist, progress, courseId) => {
@@ -17,13 +17,13 @@ const renderVideo = (vlist, progress, courseId) => {
                         <List.Item key={video._id}>
                             <List.Item.Meta
                                 avatar={<Avatar
-                                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png"/>}
+                                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png" />}
                                 title={
                                     <Link to={`/player/course/${courseId}/video/${video._id}`}> {video.title} </Link>
                                 }
                             />
-                            <span style={{marginRight: 50}}>
-                                {(progress[video._id] === true) ? <Icon type="check"/> : <div/>}
+                            <span style={{ marginRight: 50 }}>
+                                {(progress[video._id] === true) ? <Icon type="check" /> : <div />}
                             </span>
                         </List.Item>
                     );
@@ -77,8 +77,8 @@ class CourseContent extends Component {
         let key = 1;
 
         return (
-            <div style={{padding: '50px 10px 50px 10px'}}>
-                <Collapse bordered={false} style={{background: '#F0F2F5'}}>
+            <div style={{ padding: '50px 10px 50px 10px' }}>
+                <Collapse bordered={false} style={{ background: '#F0F2F5' }}>
                     {
 
                         Object.keys(section_categories).map((section) => {
@@ -95,7 +95,7 @@ class CourseContent extends Component {
                                     <div>
                                         {section}
                                         <div className="pull-right"
-                                             style={{marginRight: 50}}> {section_done}/{section_length}</div>
+                                            style={{ marginRight: 50 }}> {section_done}/{section_length}</div>
                                     </div>
                                 } key={key++} style={customPanelStyle}>
                                     {renderVideo(vlist, progress, courseId)}

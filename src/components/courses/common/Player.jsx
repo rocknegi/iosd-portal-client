@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
-import isEmpty from 'lodash/isEmpty' ;
-import {Layout, Divider, Collapse, List, Avatar, Spin, Icon, Button} from 'antd' ;
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {fetchAllCourses, fetchProgress} from "../../../actions/courseActions";
+import React, { Component } from 'react';
+import isEmpty from 'lodash/isEmpty';
+import { Layout, Divider, Collapse, List, Avatar, Spin, Icon, Button } from 'antd';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchAllCourses, fetchProgress } from "../../../actions/courseActions";
 
-const {Header, Footer, Sider, Content} = Layout;
+const { Header, Footer, Sider, Content } = Layout;
 // const SubMenu = Menu.SubMenu;
 
 
-const {Panel} = Collapse;
+const { Panel } = Collapse;
 const renderVideo = (vlist, progress, courseId) => {
     return (
         <List>
@@ -19,13 +19,13 @@ const renderVideo = (vlist, progress, courseId) => {
                         <List.Item key={video._id}>
                             <List.Item.Meta
                                 avatar={<Avatar
-                                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png"/>}
+                                    src="https://online.codingblocks.com//images/video-green-dark-23c7a6e7f9fbe82c99efb12d3daed5f2.png" />}
                                 title={
                                     <Link to={`/player/course/${courseId}/video/${video._id}`}> {video.title} </Link>
                                 }
                             />
-                            <span style={{marginRight: 50}}>
-                                {(progress[video._id] == true) ? <Icon type="check"/> : <div/>}
+                            <span style={{ marginRight: 50 }}>
+                                {(progress[video._id] == true) ? <Icon type="check" /> : <div />}
                             </span>
                         </List.Item>
                     );
@@ -103,7 +103,7 @@ class PlayerComponent extends Component {
      *
      * @param {item} MenuItem returns the react class of the selected video
      */
-    onSelectVideo({item, key, selectedKey}) {
+    onSelectVideo({ item, key, selectedKey }) {
 
         this.setState({
             selectedVideo: key,
@@ -116,7 +116,7 @@ class PlayerComponent extends Component {
     getVideosList(section_categories, courseId, progress) {
         let key = 1;
         return (
-            <Collapse bordered={false} style={{background: '#F0F2F5'}}>
+            <Collapse bordered={false} style={{ background: '#F0F2F5' }}>
                 {
 
                     Object.keys(section_categories).map((section) => {
@@ -133,7 +133,7 @@ class PlayerComponent extends Component {
                                 <div>
                                     {section}
                                     <div className="pull-right"
-                                         style={{marginRight: 50}}> {section_done}/{section_length}</div>
+                                        style={{ marginRight: 50 }}> {section_done}/{section_length}</div>
                                 </div>
                             } key={key++} style={customPanelStyle}>
                                 {renderVideo(vlist, progress, courseId)}
@@ -156,7 +156,7 @@ class PlayerComponent extends Component {
 
         if (isEmpty(course)) {
             return (
-                <Spin/>
+                <Spin />
             );
         }
 
@@ -200,27 +200,27 @@ class PlayerComponent extends Component {
                     collapsed={this.state.collapsed}
                     collapsedWidth={0}
                     width={'20rem'}
-                    style={{overflow: 'auto', height: '100vh', position: 'fixed'}}
+                    style={{ overflow: 'auto', height: '100vh', position: 'fixed' }}
                 >
                     <div className="logo">
-                        <img className='img-responsive' src="http://iosd.tech/img/IOSD-logo.png" alt=""/>
+                        <img className='img-responsive' src="http://iosd.tech/img/IOSD-logo.png" alt="" />
                     </div>
-                    <Divider/>
+                    <Divider />
                     <div>
                         {this.getVideosList(section_categories, courseId, progress)}
                     </div>
                 </Sider>
-                <Layout style={{marginLeft: (this.state.collapsed ? 0 : '20rem')}}>
+                <Layout style={{ marginLeft: (this.state.collapsed ? 0 : '20rem') }}>
                     <Header>
                         <Icon
                             className="trigger"
-                            style={{fontSize: 20}}
+                            style={{ fontSize: 20 }}
                             type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
                             onClick={this.toggle}
                         />
-                        <span style={{margin: '0 20px'}}>
-                {this.state.playerTitle}
-                </span>
+                        <span style={{ margin: '0 20px' }}>
+                            {this.state.playerTitle}
+                        </span>
                         <div className='go-dashboard'>
                             <Button className='button-solid' type="primary"><Link to={`/course/${courseId}`}>Go to Dashboard</Link> </Button>
                         </div>
@@ -229,7 +229,7 @@ class PlayerComponent extends Component {
                     <Content>
                         <div className="video-wrapper">
                             <iframe className='responsive-embed' src={findSource(this.state.currently_playing)}
-                                    frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen>
+                                frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen>
                             </iframe>
                         </div>
 
